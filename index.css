@@ -1,0 +1,113 @@
+:root {
+  --primary: #00eeff;
+  --text: #f7f9ff;
+  --bg: #151515;
+}
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+}
+body {
+  background: var(--bg);
+  padding: 0px;
+  margin: 0px;
+}
+h1 {
+  padding: 0px;
+  margin: 0px;
+}
+header {
+  display: flex;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  z-index: 1000;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0);
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
+  /* border-radius: 10px; */
+  border: 0px solid rgba(255, 255, 255, 0.18);
+  border-bottom-width: 1px;
+  margin: 0px;
+  border-radius: 0px 0px 15px 15px;
+}
+main {
+  padding: 1.5rem;
+}
+nav {
+  padding: 15px;
+  gap: 20px;
+  display: flex;
+}
+.logo {
+  all: unset;
+  align-self: center;
+  margin-left: 1.5rem;
+  font-weight: 600;
+}
+nav a {
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text);
+  transition: 0.3s;
+}
+nav a:hover {
+  color: var(--primary);
+}
+nav a.active {
+  color: var(--primary);
+}
+#home {
+  display: flex;
+  height: 95dvh;
+  justify-content: center;
+  align-items: center;
+}
+#home > div {
+  flex: 1;
+}
+#home div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 500px) {
+  #home {
+    flex-direction: column;
+  }
+}
+
+/* HEXAGON IMAGE*/
+.hexagon {
+  width: 100px;
+  height: 57.735px;
+  background: var(--primary);
+  position: relative;
+}
+.hexagon::before {
+  content: "";
+  position: absolute;
+  top: -28.8675px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 28.8675px solid var(--primary);
+}
+.hexagon::after {
+  content: "";
+  position: absolute;
+  bottom: -28.8675px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 28.8675px solid var(--primary);
+}
