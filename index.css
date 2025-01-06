@@ -83,7 +83,7 @@ nav a.active {
 }
 
 /* HEXAGON IMAGE*/
-.hexagon {
+/* .hexagon {
   width: 100px;
   height: 57.735px;
   background: var(--primary);
@@ -110,4 +110,4 @@ nav a.active {
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   border-top: 28.8675px solid var(--primary);
-}
+} */
