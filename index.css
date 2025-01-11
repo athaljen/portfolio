@@ -1,20 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
   --primary: #00eeff;
   --text: #f7f9ff;
   --bg: #151515;
 }
+* {
+  /* box-sizing: border-box; */
+  padding: 0px;
+  margin: 0px;
+}
 html {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Poppins", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text);
-}
-body {
   background: var(--bg);
-  padding: 0px;
-  margin: 0px;
-}
-h1 {
-  padding: 0px;
-  margin: 0px;
 }
 header {
   display: flex;
@@ -36,6 +35,7 @@ header {
 }
 main {
   padding: 1.5rem;
+  padding-top: 60px;
 }
 nav {
   padding: 15px;
@@ -48,6 +48,11 @@ nav {
   margin-left: 1.5rem;
   font-weight: 600;
 }
+.logo span {
+  color: var(--primary);
+  text-shadow: 0px 0px 10px #00eeff88, 0px 0px 20px #00eeff99,
+    0px 0px 30px #00eeff60;
+}
 nav a {
   cursor: pointer;
   text-decoration: none;
@@ -57,25 +62,37 @@ nav a {
 }
 nav a:hover {
   color: var(--primary);
+  text-shadow: 0px 0px 10px #00eeff88, 0px 0px 20px #00eeff99,
+    0px 0px 30px #00eeff60;
 }
 nav a.active {
   color: var(--primary);
 }
+#menu-icon {
+  display: none;
+  place-content: center;
+  margin: 1rem;
+  font-size: x-large;
+}
+/* common style */
+.text-primary {
+  color: var(--primary);
+}
+/* home styles */
 #home {
   display: flex;
   height: 95dvh;
   justify-content: center;
   align-items: center;
 }
-#home > div {
+#home div {
   flex: 1;
+  place-content: center;
 }
-#home div:nth-child(2) {
+  /* #home div:nth-child(2) {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+  place-content: center;
+} */
 @media (max-width: 500px) {
   #home {
     flex-direction: column;
