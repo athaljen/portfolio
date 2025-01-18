@@ -309,6 +309,8 @@ main {
   padding: 13px;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
+  box-shadow: inset 19px 19px 35px #1a1a1a, inset -19px -19px 35px #2e2e2e;
+  /* box-shadow: inset 19px 19px 23px #171717, inset -19px -19px 23px #313131; */
 }
 .exp-card:hover {
   box-shadow: 0px 0px 10px var(--primary);
@@ -346,6 +348,16 @@ main {
   font-size: smaller;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0;
 }
 #contact textarea {
   all: unset;
