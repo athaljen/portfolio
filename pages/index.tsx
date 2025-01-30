@@ -24,7 +24,6 @@ export default function App() {
           if (entry.isIntersecting) {
             headerLinks.forEach((link) => link.classList.remove("active"));
             dropdownLinks.forEach((link) => link.classList.remove("active"));
-            console.log(entry.target.id);
 
             const activeHeaderLink = document.querySelector(
               `header nav .nav-links[href="#${entry.target.id}"]`
@@ -39,7 +38,7 @@ export default function App() {
         });
       },
       {
-        threshold: [0.2, 0.6, 1.0],
+        threshold: [0.1, 0.5, 1.0],
         rootMargin: "0px 0px -50% 0px",
       }
     );
