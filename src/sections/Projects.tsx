@@ -6,8 +6,8 @@ export default function Projects() {
     <section id="projects">
       <h2 className="section-title">Projects</h2>
       <div className="projects-cont">
-        {ProjectsData.map((proj) => (
-          <ProjCard data={proj} />
+        {ProjectsData.map((proj, idx) => (
+          <ProjCard data={proj} key={idx} />
         ))}
       </div>
     </section>
