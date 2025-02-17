@@ -1,3 +1,4 @@
+import About from "@/src/sections/About";
 import Contact from "@/src/sections/Contact";
 import Experience from "@/src/sections/Experience";
 import Home from "@/src/sections/Home";
@@ -82,6 +83,9 @@ export default function App() {
           <a className="nav-links" href="#home">
             Home
           </a>
+          <a className="nav-links" href="#about">
+            About
+          </a>
           <a className="nav-links" href="#experience">
             Experience
           </a>
@@ -102,6 +106,9 @@ export default function App() {
         <a className="nav-links" href="#home">
           Home
         </a>
+        <a className="nav-links" href="#about">
+          About
+        </a>
         <a className="nav-links" href="#experience">
           Experience
         </a>
@@ -114,6 +121,7 @@ export default function App() {
       </div>
       <main>
         <Home />
+        <About />
         <Experience />
         <Projects />
         <Contact />
