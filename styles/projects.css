@@ -8,7 +8,6 @@
 .project-card {
   border-radius: 10px;
   overflow: hidden;
-  background-color: red;
   width: 100%;
   aspect-ratio: 2/1.1;
   position: relative;

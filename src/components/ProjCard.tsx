@@ -1,10 +1,11 @@
 "use strict;";
 import React, { memo } from "react";
-import { ProjectsData } from "../data";
+import ProjectsData from "../data/ProjectsData";
 
 type Props = {
   data: (typeof ProjectsData)[0];
 };
+
 const ProjCard = memo(({ data }: Props) => {
   return (
     <div>

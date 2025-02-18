@@ -10,7 +10,7 @@ const ProjectsData = Object.freeze([
       "Integrated backend APIs for real-time data fetching and transactions",
     ],
     techStack: ["React Native", "React", "Redux", "Firebase", "Node.js"],
-    image: "assets/ffbargains.jpg",
+    image: "/assets/projects/ffbargains.jpg",
     android_link:
       "https://play.google.com/store/apps/details?id=com.ffbargains",
     ios_link:
@@ -20,12 +20,12 @@ const ProjectsData = Object.freeze([
   {
     title: "Aap Ka Bazar - Online Grocery",
     description: `Save more on your groceries with www.aapkabazar.co! 
-    Your one-stop shop for all your grocery needs at the lowest prices. 
-    Choose your grocery from 10,000+ products and thousands of brands,
-    and get it delivered to your doorstep daily.`,
+      Your one-stop shop for all your grocery needs at the lowest prices. 
+      Choose your grocery from 10,000+ products and thousands of brands,
+      and get it delivered to your doorstep daily.`,
     contributions: ["I have made the project from scratch"],
     techStack: ["React Native", "React"],
-    image: "/assets/apka-bazar.jpg",
+    image: "/assets/projects/apka-bazar.jpg",
     android_link:
       "https://play.google.com/store/apps/details?id=co.aapkabazar.app",
     ios_link:
@@ -34,4 +34,4 @@ const ProjectsData = Object.freeze([
   },
 ]);
 
-export { ProjectsData };
+export default ProjectsData;
