@@ -1,6 +1,6 @@
 #about {
   /* background-color: wheat; */
-  background: radial-gradient(#00eeff76, #000000, #000000);
+  background: radial-gradient(#00eeff76, #00000000, #00000000);
 }
 .skill-card-bg {
   margin: 20px 0px;
@@ -12,4 +12,7 @@
   -webkit-backdrop-filter: blur(6px);
   border-radius: 10px;
   /* border: 1px solid rgba(255, 255, 255, 0.18); */
+}
+.skill-card i {
+  font-size: 2.5rem;
 }

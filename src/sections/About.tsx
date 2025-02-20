@@ -14,12 +14,12 @@ export default function About() {
           </p>
         </div>
         {SkillsData.map((skill) => (
-          <div className="skill-card-bg">
+          <div className="skill-card-bg" key={skill.title}>
             <div className="skill-card">
               <h3>{skill.title}</h3>
               <div>
-                {skill.techs.map((t) => (
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlGmKtrnxElpqw3AExKXPWWBulcwjlvDJa1Q&s" />
+                {skill.techs.map((t, idx) => (
+                  <i className={t.icon} aria-label={t.name}></i>
                 ))}
               </div>
             </div>

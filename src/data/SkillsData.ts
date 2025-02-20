@@ -3,8 +3,8 @@ const SkillsData = Object.freeze([
     title: "Language",
     techs: [
       {
-        name: "",
-        icon: "",
+        name: "React",
+        icon: "devicon-react-original-wordmark colored",
       },
     ],
   },
@@ -12,19 +12,14 @@ const SkillsData = Object.freeze([
     title: "Frontend",
     techs: [
       {
-        title: "Frontend",
-        techs: [""],
+        name: "React",
+        icon: "devicon-react-original",
       },
     ],
   },
   {
     title: "Backend",
-    techs: [
-      {
-        title: "Frontend",
-        techs: [""],
-      },
-    ],
+    techs: [{ name: "", icon: "" }],
   },
 ]);
 export default SkillsData;
