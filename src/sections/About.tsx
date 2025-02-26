@@ -18,8 +18,8 @@ export default function About() {
             <div className="skill-card">
               <h3>{skill.title}</h3>
               <div>
-                {skill.techs.map((t, idx) => (
-                  <i className={t.icon} aria-label={t.name}></i>
+                {skill.techs.map(({ Icon, name }, idx) => (
+                  <Icon key={idx} />
                 ))}
               </div>
             </div>
