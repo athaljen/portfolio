@@ -10,7 +10,8 @@ const ProjCard = memo(({ data }: Props) => {
   return (
     <div>
       <div className="project-card" role="button">
-        <img src={data?.image} />
+        <iframe src="https://play.google.com/store/apps/details?id=com.story_generation&hl=en_IN"></iframe>
+        {/* <img src={data?.image} /> */}
         <div className="proj-card-overlay">
           <div>
             <h4>{data.title}</h4>

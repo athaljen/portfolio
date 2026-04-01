@@ -6,7 +6,7 @@ export default function Home() {
       <div>
         <h1>Hi! I'm Bisworanjan Jena</h1>
         <h2>
-          And I'm a <span className="text-primary">Frontend Developer</span>
+          And I'm a <span className="text-primary">Software Engineer</span>
         </h2>
         {/* <h3 className="changing-text">
                   I know
