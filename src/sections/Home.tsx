@@ -1,4 +1,5 @@
 import Image from "next/image";
+import HomeChangingText from "../components/HomeChangingText";
 
 export default function Home() {
   return (
@@ -8,30 +9,11 @@ export default function Home() {
         <h2>
           And I'm a <span className="text-primary">Software Engineer</span>
         </h2>
-        {/* <h3 className="changing-text">
-                  I know
-                  <div>
-                    <span>React Native</span>
-                    <span>React</span>
-                    <span>Next.js</span>
-                    <span>Node.js</span>
-                    <span>JavaScript ES6</span>
-                    <span>TypeScript</span>
-                    <span>Android/iOS</span>
-                    <span>HTML/CSS</span>
-                    <span>Git & GitHub</span>
-                    <span>Redux & Toolkit</span>
-                    <span>RESTFul APIs</span>
-                    <span>GraphQL</span>
-                    <span>VS Code/XCode</span>
-                    <span>Android Studio</span>
-                  </div>
-                </h3> */}
+        <HomeChangingText />
         <p>
-          I specialize in crafting seamless user interfaces and robust web and
-          mobile applications using React and React Native. With more than 2
-          years of experience, I’ve worked on diverse projects, including social
-          media, e-commerce, IoT, and healthcare apps.
+          I design and develop high-performance mobile and web applications that
+          scale. Passionate about clean architecture, real-time systems, and
+          crafting seamless user experiences.
         </p>
         <div className="home-btns">
           <a href="mailto:bisworanjanjena23@gmail.com">Hire Me</a>
@@ -93,7 +75,12 @@ export default function Home() {
               </path>
             </svg>
           </div>
-          <Image src="/assets/photo.png" alt="me" width={300} height={300} />
+          <Image
+            src="/assets/animations/developer.gif"
+            alt="me"
+            width={350}
+            height={350}
+          />
         </div>
       </div>
     </section>

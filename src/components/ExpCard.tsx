@@ -8,23 +8,22 @@ type Props = {
   location: string;
   description: string;
 };
+
 const ExpCard = memo(
   ({ company, date, description, location, title }: Props) => {
     return (
-      <div>
-        <div className="exp-card">
-          <h3>
-            {title} <span>({date})</span>
-          </h3>
-          <h4>
-            {company}
-            <span>~ {location}</span>
-          </h4>
-          <p>{description}</p>
-        </div>
+      <div className="exp-card">
+        <h3>
+          {title} <span>({date})</span>
+        </h3>
+        <h4>
+          {company}
+          <span>~ {location}</span>
+        </h4>
+        <p>{description}</p>
       </div>
     );
-  }
+  },
 );
 
 export default ExpCard;

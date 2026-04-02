@@ -1,4 +1,4 @@
-import SkillsData from "../data/SkillsData";
+import skillsData from "../data/skillsData";
 
 export default function About() {
   return (
@@ -7,24 +7,27 @@ export default function About() {
       <div>
         <div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-            doloribus quidem at, quod delectus vero quos ex velit assumenda iure
-            dignissimos suscipit harum possimus iste dolores minus error
-            voluptates? Debitis.
+            Software Development Engineer with 3+ years of experience
+            specializing in React Native, building scalable mobile applications
+            used by 400K+ users. Strong expertise in performance optimization,
+            real-time systems, and end-to-end app development across mobile,
+            web, and backend using React Native, Next.js, and Node.js.
           </p>
         </div>
-        {SkillsData.map((skill) => (
-          <div className="skill-card-bg" key={skill.title}>
-            <div className="skill-card">
-              <h3>{skill.title}</h3>
-              <div>
-                {skill.techs.map(({ Icon, name }, idx) => (
-                  <Icon key={idx} />
-                ))}
+        <h3 className="skill-title">
+          My <span className="text-primary">Skills</span>
+        </h3>
+        <div className="skill-container">
+          {skillsData.map((skill, idx) => {
+            const title = Object.keys(skill)[0];
+            return (
+              <div className="skill-card" key={idx}>
+                <strong>{title}</strong>
+                <p>{skill[title as keyof typeof skill]}</p>
               </div>
-            </div>
-          </div>
-        ))}
+            );
+          })}
+        </div>
       </div>
     </section>
   );

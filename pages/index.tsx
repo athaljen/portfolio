@@ -27,12 +27,12 @@ export default function App() {
             dropdownLinks.forEach((link) => link.classList.remove("active"));
 
             const activeHeaderLink = document.querySelector(
-              `header nav .nav-links[href="#${entry.target.id}"]`
+              `header nav .nav-links[href="#${entry.target.id}"]`,
             );
             if (activeHeaderLink) activeHeaderLink.classList.add("active");
 
             const activeDropdownLink = document.querySelector(
-              `.nav-dropdown .nav-links[href="#${entry.target.id}"]`
+              `.nav-dropdown .nav-links[href="#${entry.target.id}"]`,
             );
             if (activeDropdownLink) activeDropdownLink.classList.add("active");
           }
@@ -41,7 +41,7 @@ export default function App() {
       {
         threshold: [0.1, 0.5, 1.0],
         rootMargin: "0px 0px -50% 0px",
-      }
+      },
     );
 
     // Observe each section
@@ -119,7 +119,7 @@ export default function App() {
           Contact
         </a>
       </div>
-      <main>
+      <main className="safe-container">
         <Home />
         <About />
         <Experience />
