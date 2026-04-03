@@ -1,5 +1,8 @@
 import Image from "next/image";
+
 import HomeChangingText from "../components/HomeChangingText";
+import developerGif from "@/assets/animations/developer.gif";
+import { PERSONAL_LINKS } from "@/constants";
 
 export default function Home() {
   return (
@@ -16,17 +19,22 @@ export default function Home() {
           crafting seamless user experiences.
         </p>
         <div className="home-btns">
-          <a href="mailto:bisworanjanjena23@gmail.com">Hire Me</a>
-          <a href="#">Download CV</a>
+          <a href={PERSONAL_LINKS.hireMe}>Hire Me</a>
+          <a href={PERSONAL_LINKS.resume} download="Bisworanjan_Jena.pdf">
+            Download CV
+          </a>
         </div>
         <div className="social-icons">
-          <a
-            href="https://www.linkedin.com/in/bisworanjan-jena-0b0b3b1b4/"
-            target="_blank"
-          >
+          <a href={PERSONAL_LINKS.phone} target="_blank">
+            <i className="fa-solid fa-phone"></i>
+          </a>
+          <a href={PERSONAL_LINKS.email} target="_blank">
+            <i className="fa-solid fa-envelope"></i>
+          </a>
+          <a href={PERSONAL_LINKS.linkedin} target="_blank">
             <i className="fa-brands fa-linkedin-in"></i>
           </a>
-          <a href="https://github.com/athaljen/" target="_blank">
+          <a href={PERSONAL_LINKS.github} target="_blank">
             <i className="fa-brands fa-github"></i>
           </a>
         </div>
@@ -40,7 +48,7 @@ export default function Home() {
               width="100%"
               height="100%"
             >
-              <path fill="#00eeff">
+              <path fill="currentColor">
                 <animate
                   attributeName="d"
                   dur="10000ms"
@@ -61,7 +69,7 @@ export default function Home() {
               width="100%"
               height="100%"
             >
-              <path fill="#00eeff">
+              <path fill="currentColor">
                 <animate
                   attributeName="d"
                   dur="10000ms"
@@ -75,12 +83,7 @@ export default function Home() {
               </path>
             </svg>
           </div>
-          <Image
-            src="/assets/animations/developer.gif"
-            alt="me"
-            width={350}
-            height={350}
-          />
+          <Image src={developerGif} alt="Developer" width={250} height={250} />
         </div>
       </div>
     </section>

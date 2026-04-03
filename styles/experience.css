@@ -9,12 +9,6 @@
   }
 }
 
-@media (min-width: 1400px) {
-  .exp-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 .exp-card {
   border-radius: 15px;
   padding: 13px;

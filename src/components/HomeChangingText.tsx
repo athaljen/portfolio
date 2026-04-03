@@ -2,19 +2,22 @@ import React, { useEffect, useState } from "react";
 
 const skillsData = [
   "React Native",
-  "React",
-  "Next.js",
-  "Node.js",
   "JavaScript ES6",
   "TypeScript",
+  "React.js",
+  "Next.js",
+  "Node.js",
+  "Expo",
   "Android & iOS",
   "HTML & CSS",
   "Git & GitHub",
-  "Redux & Toolkit",
+  "Redux & Zustand",
   "RESTFul APIs",
-  "GraphQL",
-  "VS Code",
   "Android Studio & Xcode",
+  "GraphQL",
+  "Firebase",
+  "Supabase",
+  "PostgreSQL",
 ];
 
 const typingSpeed = 100; // speed per letter

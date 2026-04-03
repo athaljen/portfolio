@@ -83,7 +83,6 @@
   transition: 0.4s;
 }
 .img-box {
-  height: auto;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -92,9 +91,6 @@
   position: relative;
 }
 .img-box img {
-  /* width: 80%;
-  height: auto;
-  max-width: 300px; */
   margin-bottom: 10%;
   position: absolute;
 }
@@ -102,7 +98,8 @@
   position: absolute;
   width: 100%;
   height: auto;
-  max-width: 550px;
+  max-width: 400px;
+  color: var(--primary);
 }
 .liquid-wave:nth-child(2) {
   filter: blur(20px);

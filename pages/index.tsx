@@ -1,10 +1,11 @@
+import { useEffect } from "react";
+
 import About from "@/src/sections/About";
 import Contact from "@/src/sections/Contact";
 import Experience from "@/src/sections/Experience";
 import Home from "@/src/sections/Home";
 import Projects from "@/src/sections/Projects";
 import Head from "next/head";
-import { useEffect } from "react";
 
 export default function App() {
   function toggleMenu(event: React.MouseEvent<HTMLDivElement>) {

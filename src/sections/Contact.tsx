@@ -1,3 +1,5 @@
+import { PERSONAL_LINKS } from "@/constants";
+
 export default function Contact() {
   return (
     <section id="contact">
@@ -12,22 +14,19 @@ export default function Contact() {
         </button>
       </form>
       <div className="contact-icons">
-        <a
-          href="https://www.linkedin.com/in/bisworanjan-jena-0b0b3b1b4/"
-          target="_blank"
-        >
+        <a href={PERSONAL_LINKS.linkedin} target="_blank">
           <i className="fa-brands fa-linkedin-in"></i>
         </a>
-        <a href="https://github.com/athaljen/" target="_blank">
+        <a href={PERSONAL_LINKS.github} target="_blank">
           <i className="fa-brands fa-github"></i>
         </a>
-        <a href="mailto:bisworanjanjena23@gmail.com" target="_blank">
+        <a href={PERSONAL_LINKS.email} target="_blank">
           <i className="fa-solid fa-envelope"></i>
         </a>
-        <a href="https://x.com/BISWORANJAN23" target="_blank">
+        <a href={PERSONAL_LINKS.twitter} target="_blank">
           <i className="fa-brands fa-x-twitter"></i>
         </a>
-        <a href="https://www.instagram.com/athal_jen/" target="_blank">
+        <a href={PERSONAL_LINKS.instagram} target="_blank">
           <i className="fa-brands fa-instagram"></i>
         </a>
       </div>
