@@ -6,11 +6,16 @@ import { ProjectDataType } from '@/types/ProjectTypes'
 
 type Props = {
   data: ProjectDataType
+  onReadMore?: (_data: ProjectDataType) => void
 }
 
-const ProjectCard = ({ data }: Props) => {
+const ProjectCard = ({ data, onReadMore }: Props) => {
   return (
-    <div className="project-card" role="button">
+    <div
+      className="project-card"
+      role="button"
+      onClick={() => onReadMore?.(data)}
+    >
       <img src={data?.image.src} />
       <div className="project-card-overlay">
         <div>
@@ -19,7 +24,11 @@ const ProjectCard = ({ data }: Props) => {
           <p>{data.date}</p>
           <p className="project-card-overlay-desc">{data.description}</p>
         </div>
-        <div role="button" className="project-details-btn">
+        <div
+          role="button"
+          className="project-details-btn"
+          // onClick={() => onReadMore?.(data)}
+        >
           Read More
         </div>
       </div>
