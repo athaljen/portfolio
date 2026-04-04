@@ -8,7 +8,7 @@ export type ProjectDataType = {
   contributions: string[]
   techStack: string[]
   image: StaticImageData
-  android_link: string
-  ios_link: string
+  android: string
+  ios: string
   website: string
 }

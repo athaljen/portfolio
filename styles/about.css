@@ -20,6 +20,11 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
   font-size: 0.9rem;
 }
+@media (max-width: 576px) {
+  .skill-card {
+    flex-grow: 1;
+  }
+}
 .skill-card p {
   margin-top: 5px;
   font-size: 0.8rem;

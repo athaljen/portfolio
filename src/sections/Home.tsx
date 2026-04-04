@@ -25,17 +25,33 @@ export default function Home() {
             Download CV
           </a>
         </div>
-        <div className="social-icons">
-          <a href={PERSONAL_LINKS.phone} target="_blank">
+        <div className="social-icons-container">
+          <a
+            href={PERSONAL_LINKS.phone}
+            target="_blank"
+            className="social-icon"
+          >
             <i className="fa-solid fa-phone"></i>
           </a>
-          <a href={PERSONAL_LINKS.email} target="_blank">
+          <a
+            href={PERSONAL_LINKS.email}
+            target="_blank"
+            className="social-icon"
+          >
             <i className="fa-solid fa-envelope"></i>
           </a>
-          <a href={PERSONAL_LINKS.linkedin} target="_blank">
+          <a
+            href={PERSONAL_LINKS.linkedin}
+            target="_blank"
+            className="social-icon"
+          >
             <i className="fa-brands fa-linkedin-in"></i>
           </a>
-          <a href={PERSONAL_LINKS.github} target="_blank">
+          <a
+            href={PERSONAL_LINKS.github}
+            target="_blank"
+            className="social-icon"
+          >
             <i className="fa-brands fa-github"></i>
           </a>
         </div>

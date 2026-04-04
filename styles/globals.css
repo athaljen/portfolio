@@ -20,6 +20,10 @@ html {
   background: var(--bg);
   scroll-behavior: smooth;
 }
+body {
+  margin: 0px;
+  padding: 0px;
+}
 header {
   display: flex;
   position: fixed;
@@ -41,6 +45,13 @@ nav {
   padding: 15px;
   gap: 20px;
   display: flex;
+}
+.no-scroll {
+  overflow: hidden;
+}
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
 .logo {
   all: unset;

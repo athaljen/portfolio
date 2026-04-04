@@ -2,13 +2,11 @@
   display: grid;
   gap: 20px;
 }
-
 @media (min-width: 768px) {
   .exp-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 .exp-card {
   border-radius: 15px;
   padding: 13px;
