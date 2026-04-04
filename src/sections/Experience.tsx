@@ -1,5 +1,5 @@
-import ExpCard from "../components/ExpCard";
-import workExperienceData from "../data/workExperienceData";
+import ExpCard from '../components/ExpCard'
+import workExperienceData from '../data/workExperienceData'
 
 export default function Experience() {
   return (
@@ -18,5 +18,5 @@ export default function Experience() {
         ))}
       </div>
     </section>
-  );
+  )
 }

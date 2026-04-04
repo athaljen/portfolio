@@ -1,4 +1,4 @@
-import skillsData from "../data/skillsData";
+import skillsData from '../data/skillsData'
 
 export default function About() {
   return (
@@ -19,16 +19,16 @@ export default function About() {
         </h3>
         <div className="skill-container">
           {skillsData.map((skill, idx) => {
-            const title = Object.keys(skill)[0];
+            const title = Object.keys(skill)[0]
             return (
               <div className="skill-card" key={idx}>
                 <strong>{title}</strong>
                 <p>{skill[title as keyof typeof skill]}</p>
               </div>
-            );
+            )
           })}
         </div>
       </div>
     </section>
-  );
+  )
 }

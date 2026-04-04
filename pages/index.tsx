@@ -1,66 +1,72 @@
-import { useEffect } from "react";
+import React, { useEffect } from 'react'
 
-import About from "@/src/sections/About";
-import Contact from "@/src/sections/Contact";
-import Experience from "@/src/sections/Experience";
-import Home from "@/src/sections/Home";
-import Projects from "@/src/sections/Projects";
-import Head from "next/head";
+import Head from 'next/head'
+import Link from 'next/link'
+
+import About from '@/src/sections/About'
+import Contact from '@/src/sections/Contact'
+import Experience from '@/src/sections/Experience'
+import Home from '@/src/sections/Home'
+import Projects from '@/src/sections/Projects'
 
 export default function App() {
   function toggleMenu(event: React.MouseEvent<HTMLDivElement>) {
-    const menuIcon = event.currentTarget;
-    menuIcon.classList.toggle("active");
-    const nav = document.getElementById("nav-menu");
-    nav?.classList.toggle("show");
+    const menuIcon = event.currentTarget
+    menuIcon.classList.toggle('active')
+    const nav = document.getElementById('nav-menu')
+    nav?.classList.toggle('show')
   }
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section");
-    const headerLinks = document.querySelectorAll("header nav .nav-links");
-    const dropdownLinks = document.querySelectorAll(".nav-dropdown .nav-links");
+    const sections = document.querySelectorAll('section')
+    const headerLinks = document.querySelectorAll('header nav .nav-links')
+    const dropdownLinks = document.querySelectorAll('.nav-dropdown .nav-links')
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            headerLinks.forEach((link) => link.classList.remove("active"));
-            dropdownLinks.forEach((link) => link.classList.remove("active"));
+            headerLinks.forEach((link) => link.classList.remove('active'))
+            dropdownLinks.forEach((link) => link.classList.remove('active'))
 
             const activeHeaderLink = document.querySelector(
               `header nav .nav-links[href="#${entry.target.id}"]`,
-            );
-            if (activeHeaderLink) activeHeaderLink.classList.add("active");
+            )
+            if (activeHeaderLink) {
+              activeHeaderLink.classList.add('active')
+            }
 
             const activeDropdownLink = document.querySelector(
               `.nav-dropdown .nav-links[href="#${entry.target.id}"]`,
-            );
-            if (activeDropdownLink) activeDropdownLink.classList.add("active");
+            )
+            if (activeDropdownLink) {
+              activeDropdownLink.classList.add('active')
+            }
           }
-        });
+        })
       },
       {
         threshold: [0.1, 0.5, 1.0],
-        rootMargin: "0px 0px -50% 0px",
+        rootMargin: '0px 0px -50% 0px',
       },
-    );
+    )
 
     // Observe each section
-    sections.forEach((section) => observer.observe(section));
+    sections.forEach((section) => observer.observe(section))
 
     dropdownLinks.forEach((link) => {
-      let menuIcon = document.querySelector(".menu-icon");
-      link.addEventListener("click", () => {
-        const nav = document.getElementById("nav-menu");
-        nav?.classList.remove("show");
-        menuIcon?.classList?.remove("active");
-      });
-    });
+      const menuIcon = document.querySelector('.menu-icon')
+      link.addEventListener('click', () => {
+        const nav = document.getElementById('nav-menu')
+        nav?.classList.remove('show')
+        menuIcon?.classList?.remove('active')
+      })
+    })
 
     return () => {
-      observer.disconnect();
-    };
-  }, []);
+      observer.disconnect()
+    }
+  }, [])
 
   return (
     <>
@@ -77,9 +83,9 @@ export default function App() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        <a className="logo" href="/">
+        <Link className="logo" href="/">
           <span>J</span>en.
-        </a>
+        </Link>
         <nav>
           <a className="nav-links" href="#home">
             Home
@@ -128,5 +134,5 @@ export default function App() {
         <Contact />
       </main>
     </>
-  );
+  )
 }

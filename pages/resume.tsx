@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const Resume = () => {
   return (
@@ -103,7 +103,7 @@ const Resume = () => {
             best practices.
           </li>
         </ul>
-        <div className="header-justify" style={{ marginTop: "20px" }}>
+        <div className="header-justify" style={{ marginTop: '20px' }}>
           <p>
             <strong>React Native Developer </strong>
             <br />
@@ -206,7 +206,7 @@ const Resume = () => {
         </ul>
 
         <p>
-          <strong>Children's Storytelling App (Kahani Kids)</strong>
+          <strong>Children&apos;s Storytelling App (Kahani Kids)</strong>
         </p>
         <ul>
           <li>
@@ -284,7 +284,7 @@ const Resume = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Resume;
+export default Resume

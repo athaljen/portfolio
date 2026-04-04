@@ -42,7 +42,7 @@
   overflow: hidden;
 }
 .home-btns a::before {
-  content: "";
+  content: '';
   background-color: var(--bg);
   position: absolute;
   top: 0;

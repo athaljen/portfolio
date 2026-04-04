@@ -1,16 +1,17 @@
-import Image from "next/image";
+import Image from 'next/image'
 
-import HomeChangingText from "../components/HomeChangingText";
-import developerGif from "@/assets/animations/developer.gif";
-import { PERSONAL_LINKS } from "@/constants";
+import developerGif from '@/assets/animations/developer.gif'
+import { PERSONAL_LINKS } from '@/constants'
+
+import HomeChangingText from '../components/HomeChangingText'
 
 export default function Home() {
   return (
     <section id="home">
       <div>
-        <h1>Hi! I'm Bisworanjan Jena</h1>
+        <h1>Hi! I&apos;m Bisworanjan Jena</h1>
         <h2>
-          And I'm a <span className="text-primary">Software Engineer</span>
+          And I&apos;m a <span className="text-primary">Software Engineer</span>
         </h2>
         <HomeChangingText />
         <p>
@@ -87,5 +88,5 @@ export default function Home() {
         </div>
       </div>
     </section>
-  );
+  )
 }

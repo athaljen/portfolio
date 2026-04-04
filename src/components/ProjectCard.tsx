@@ -1,12 +1,14 @@
-import React, { memo } from "react";
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
+import React, { memo } from 'react'
 
-import ProjectsData from "../data/ProjectsData";
+import { ProjectDataType } from '@/types/ProjectTypes'
 
 type Props = {
-  data: (typeof ProjectsData)[0];
-};
+  data: ProjectDataType
+}
 
-const ProjectCard = memo(({ data }: Props) => {
+const ProjectCard = ({ data }: Props) => {
   return (
     <div className="project-card" role="button">
       <img src={data?.image.src} />
@@ -22,7 +24,7 @@ const ProjectCard = memo(({ data }: Props) => {
         </div>
       </div>
     </div>
-  );
-});
+  )
+}
 
-export default memo(ProjectCard);
+export default memo(ProjectCard)

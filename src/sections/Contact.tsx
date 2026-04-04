@@ -1,4 +1,4 @@
-import { PERSONAL_LINKS } from "@/constants";
+import { PERSONAL_LINKS } from '@/constants'
 
 export default function Contact() {
   return (
@@ -31,5 +31,5 @@ export default function Contact() {
         </a>
       </div>
     </section>
-  );
+  )
 }
