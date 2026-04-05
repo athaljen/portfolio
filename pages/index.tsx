@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 import About from '@/src/sections/About'
-import Contact from '@/src/sections/Contact'
+import ContactMe from '@/src/sections/ContactMe'
 import Experience from '@/src/sections/Experience'
 import Home from '@/src/sections/Home'
 import Projects from '@/src/sections/Projects'
@@ -131,7 +131,7 @@ export default function App() {
         <About />
         <Experience />
         <Projects />
-        <Contact />
+        <ContactMe />
       </main>
     </>
   )

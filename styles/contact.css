@@ -3,15 +3,24 @@
   display: flex;
   flex-direction: column;
 }
-#contact form {
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-form form {
   display: flex;
   flex-direction: column;
   gap: 15px;
   max-width: 600px;
   width: 100%;
-  align-self: center;
 }
-#contact input {
+.contact-form div {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form input {
   all: unset;
   color: var(--text);
   height: 40px;
@@ -26,12 +35,12 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-input[type='number'] {
+/* input[type='number'] {
   -moz-appearance: textfield;
   appearance: textfield;
   margin: 0;
-}
-#contact textarea {
+} */
+.contact-form textarea {
   all: unset;
   color: var(--text);
   border-radius: 10px;
@@ -40,6 +49,16 @@ input[type='number'] {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   height: 100px;
+  margin: 0px;
+}
+.contact-me-error {
+  color: var(--error);
+  font-size: 11px;
+  align-self: flex-end;
+  margin-left: auto;
+  margin-top: 5px;
+  padding: 0px;
+  margin: 0px;
 }
 .send-message {
   background-color: var(--primary);

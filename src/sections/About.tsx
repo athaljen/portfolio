@@ -1,6 +1,8 @@
+import { memo } from 'react'
+
 import skillsData from '../data/skillsData'
 
-export default function About() {
+function About() {
   return (
     <section id="about">
       <h2 className="section-title">About Me</h2>
@@ -14,6 +16,7 @@ export default function About() {
             web, and backend using React Native, Next.js, and Node.js.
           </p>
         </div>
+
         <h3 className="skill-title">
           My <span className="text-primary">Skills</span>
         </h3>
@@ -32,3 +35,5 @@ export default function About() {
     </section>
   )
 }
+
+export default memo(About)
