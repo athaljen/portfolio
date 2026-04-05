@@ -30,7 +30,8 @@ function ContactMe() {
         },
         body: JSON.stringify(data),
       }).then((res) => res.json())
-    } catch (error) {
+    } catch {
+      // alert('Failed to send message. Please try again later.')
     } finally {
       setSending(false)
     }
