@@ -31,7 +31,6 @@ function ContactMe() {
         body: JSON.stringify(data),
       }).then((res) => res.json())
     } catch (error) {
-      console.error('Error sending mail:', error)
     } finally {
       setSending(false)
     }
