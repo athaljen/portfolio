@@ -45,15 +45,16 @@ const ProjectDetailsModal = forwardRef<ModalRefType, any>((_, ref) => {
           border: 'none',
           borderRadius: '10px',
           maxWidth: '786px',
-          padding: '0px 20px 20px 20px',
+          padding: '0px 20px 30px 20px',
           width: '100%',
           margin: '0 auto',
           color: '#ffffff',
           top: '65px',
-          bottom: '20px',
+          bottom: '40px',
+          scrollbarWidth: 'none',
         },
         overlay: {
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          backgroundColor: 'rgba(0, 0, 0, 0.6)',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
@@ -66,7 +67,9 @@ const ProjectDetailsModal = forwardRef<ModalRefType, any>((_, ref) => {
           position: 'sticky',
           top: 0,
           zIndex: 1,
-          background: '#151515',
+          background: 'rgba(21, 21, 21, 0.65)',
+          backdropFilter: 'blur(25.5px)',
+          WebkitBackdropFilter: 'blur(25.5px)',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
@@ -82,20 +85,17 @@ const ProjectDetailsModal = forwardRef<ModalRefType, any>((_, ref) => {
             height: 40,
             width: 40,
             borderRadius: '50%',
-            backgroundColor: 'var(--primary)',
-            border: 'none',
+            backgroundColor: 'transparent',
             cursor: 'pointer',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            border: '1px solid #ffffff75',
           }}
         >
           <i
             className="fa-solid fa-xmark"
-            style={{
-              color: '#151515',
-              fontSize: 20,
-            }}
+            style={{ color: '#ffffff', fontSize: 20 }}
           ></i>
         </button>
       </div>
@@ -110,23 +110,31 @@ const ProjectDetailsModal = forwardRef<ModalRefType, any>((_, ref) => {
       >
         <Image src={data?.image} alt={data?.title} fill />
       </div>
-      <p style={{ margin: '15px 0px' }}>{data?.description}</p>
+      <p style={{ margin: '15px 0px', color: '#ffffffb3' }}>
+        {data?.description}
+      </p>
 
       <strong>Contributions:</strong>
-      <ul style={{ marginLeft: '25px', marginBottom: '15px' }}>
+      <ul
+        style={{
+          marginLeft: '25px',
+          marginBottom: '15px',
+          fontSize: '14px',
+        }}
+      >
         {data?.contributions.map((contribution, index) => (
           <li key={index}>{contribution}</li>
         ))}
       </ul>
 
       <strong>Tech Stack:</strong>
-      <ul style={{ marginLeft: '25px' }}>
+      <ul className="project-tech-stack">
         {data?.techStack.map((tech, index) => (
-          <li key={index}>{tech}</li>
+          <p key={index}>{tech}</p>
         ))}
       </ul>
 
-      <div style={{ display: 'flex', gap: '20px', marginTop: '15px' }}>
+      <div style={{ display: 'flex', gap: '15px', marginTop: '15px' }}>
         {data?.android && (
           <a
             className="social-icon"

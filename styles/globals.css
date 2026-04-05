@@ -7,6 +7,7 @@
   --gray: #9c9c9c;
   --card-bg: #242424;
   --card-border: #4b4b4b;
+  --error: #ff4d4d;
   --glow: 0px 0px 10px #00eeff88, 0px 0px 20px #00eeff99;
   --glow-low: 0px 0px 5px #00eeff;
 }
@@ -23,6 +24,9 @@ html {
 body {
   margin: 0px;
   padding: 0px;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 header {
   display: flex;

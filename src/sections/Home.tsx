@@ -100,7 +100,13 @@ export default function Home() {
               </path>
             </svg>
           </div>
-          <Image src={developerGif} alt="Developer" width={250} height={250} />
+          <Image
+            src={developerGif}
+            alt="Developer"
+            width={250}
+            height={250}
+            unoptimized
+          />
         </div>
       </div>
     </section>

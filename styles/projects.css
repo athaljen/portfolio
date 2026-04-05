@@ -48,13 +48,13 @@
   box-sizing: border-box;
   top: 0;
   left: 0;
-  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.199) 100%);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
   z-index: 1;
   opacity: 0;
   transition: 0.3s;
   transform: translateY(100%);
-  backdrop-filter: blur(1.9px);
-  -webkit-backdrop-filter: blur(1.5px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 .project-card-overlay p {
   font-size: 13px;
@@ -69,12 +69,10 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
-
 .project-card-overlay-desc {
   font-size: 12px;
   color: #f4fdff;
 }
-
 .project-details-btn {
   align-self: center;
   border: 1px solid var(--primary);
@@ -83,4 +81,19 @@
   color: var(--text);
   cursor: pointer;
   font-size: 12px;
+}
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 5px 10px;
+}
+.project-tech-stack p {
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.082);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 13px;
 }
