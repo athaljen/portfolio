@@ -1,24 +1,8 @@
 #home {
   display: flex;
 }
-#home div:nth-child(1) {
-  flex: 1;
-  place-content: center;
-}
-#home div:nth-child(2) {
-  flex: 1;
-  position: relative;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#home p {
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-}
 .home-bg {
-  position: fixed;
+  position: absolute;
   inset: 0;
   overflow: hidden;
 }
@@ -26,11 +10,11 @@
   position: absolute;
   inset: 0;
   -webkit-mask-image: radial-gradient(
-    140vh at 48% -21%,
+    100vh at 48% -21%,
     black 0%,
     transparent 100%
   );
-  mask-image: radial-gradient(140vh at 48% -21%, black 0%, transparent 100%);
+  mask-image: radial-gradient(100vh at 48% -21%, black 0%, transparent 100%);
 }
 .home-bg-dots {
   position: absolute;
@@ -38,6 +22,22 @@
   background-image: radial-gradient(var(--radial-bg) 1px, transparent 1px);
   background-size: 0.125rem 0.125rem;
   opacity: 0.4;
+}
+.home-left {
+  flex: 1;
+  place-content: center;
+}
+.home-right {
+  flex: 1;
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-desc {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
 }
 .home-btns {
   display: flex;
@@ -105,6 +105,7 @@
   transition: 0.4s;
 }
 .img-box {
+  flex: 1;
   z-index: 1;
   display: flex;
   align-items: center;

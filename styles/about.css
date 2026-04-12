@@ -1,6 +1,10 @@
 #about {
-  /* background-color: wheat; */
-  background: radial-gradient(#00eeff1d, #00000000, #00000000);
+  background: radial-gradient(
+    #0940747a,
+    #09407443 30%,
+    #00000000 60%,
+    #00000000 100%
+  );
 }
 .skill-title {
   font-size: 1.2rem;

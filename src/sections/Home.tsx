@@ -8,13 +8,18 @@ import HomeChangingText from '../components/HomeChangingText'
 export default function Home() {
   return (
     <section id="home">
-      <div>
+      <div className="home-bg">
+        <div className="home-bg-mask">
+          <div className="home-bg-dots"></div>
+        </div>
+      </div>
+      <div className="home-left">
         <h1>Hi! I&apos;m Bisworanjan Jena</h1>
         <h2>
           And I&apos;m a <span className="text-primary">Software Engineer</span>
         </h2>
         <HomeChangingText />
-        <p>
+        <p className="home-desc">
           I design and develop high-performance mobile and web applications that
           scale. Passionate about clean architecture, real-time systems, and
           crafting seamless user experiences.
@@ -56,7 +61,7 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div>
+      <div className="home-right">
         <div className="img-box">
           <div className="liquid-wave">
             <svg
