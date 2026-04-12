@@ -17,6 +17,28 @@
   font-size: 0.9rem;
   margin-top: 0.5rem;
 }
+.home-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+.home-bg-mask {
+  position: absolute;
+  inset: 0;
+  -webkit-mask-image: radial-gradient(
+    140vh at 48% -21%,
+    black 0%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(140vh at 48% -21%, black 0%, transparent 100%);
+}
+.home-bg-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(var(--radial-bg) 1px, transparent 1px);
+  background-size: 0.125rem 0.125rem;
+  opacity: 0.4;
+}
 .home-btns {
   display: flex;
   gap: 20px;
