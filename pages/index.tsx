@@ -13,14 +13,29 @@ export default function App() {
   function toggleMenu(event: React.MouseEvent<HTMLDivElement>) {
     const menuIcon = event.currentTarget
     menuIcon.classList.toggle('active')
-    const nav = document.getElementById('nav-menu')
-    nav?.classList.toggle('show')
+
+    const navLinks = document.querySelectorAll('.nav-dropdown-a')
+    navLinks.forEach((link) => {
+      link.classList.toggle('show')
+    })
   }
 
   useEffect(() => {
     const sections = document.querySelectorAll('section')
-    const headerLinks = document.querySelectorAll('header nav .nav-links')
-    const dropdownLinks = document.querySelectorAll('.nav-dropdown .nav-links')
+    const headerLinks = document.querySelectorAll('.nav-links')
+    const dropdownLinks = document.querySelectorAll('.nav-dropdown-a')
+
+    function hideDropdownLinks() {
+      const menuIcon = document.querySelector('.menu-icon')
+      const nav = document.getElementById('nav-menu')
+
+      menuIcon?.classList.remove('active')
+      nav?.classList.remove('show')
+
+      dropdownLinks.forEach((link) => {
+        link.classList.remove('show')
+      })
+    }
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -55,12 +70,7 @@ export default function App() {
     sections.forEach((section) => observer.observe(section))
 
     dropdownLinks.forEach((link) => {
-      const menuIcon = document.querySelector('.menu-icon')
-      link.addEventListener('click', () => {
-        const nav = document.getElementById('nav-menu')
-        nav?.classList.remove('show')
-        menuIcon?.classList?.remove('active')
-      })
+      link.addEventListener('click', hideDropdownLinks)
     })
 
     return () => {
@@ -83,46 +93,48 @@ export default function App() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        <Link className="logo" href="/">
-          <span>J</span>en.
-        </Link>
-        <nav>
-          <a className="nav-links" href="#home">
-            Home
-          </a>
-          <a className="nav-links" href="#about">
-            About
-          </a>
-          <a className="nav-links" href="#experience">
-            Experience
-          </a>
-          <a className="nav-links" href="#projects">
-            Projects
-          </a>
-          <a className="nav-links" href="#contact">
-            Contact
-          </a>
-        </nav>
-        <div className="menu-icon" onClick={toggleMenu}>
-          <span></span>
-          <span></span>
-          <span></span>
+        <div className="header-container">
+          <Link className="logo" href="/">
+            <span>J</span>en
+          </Link>
+          <nav>
+            <a className="nav-links" href="#home">
+              Home
+            </a>
+            <a className="nav-links" href="#about">
+              About
+            </a>
+            <a className="nav-links" href="#experience">
+              Work
+            </a>
+            <a className="nav-links" href="#projects">
+              Projects
+            </a>
+            <a className="nav-links" href="#contact">
+              Contact
+            </a>
+          </nav>
+          <div className="menu-icon" onClick={toggleMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </header>
       <div className="nav-dropdown" id="nav-menu">
-        <a className="nav-links" href="#home">
+        <a className="nav-links nav-dropdown-a nd-a5" href="#home">
           Home
         </a>
-        <a className="nav-links" href="#about">
+        <a className="nav-links nav-dropdown-a nd-a3" href="#about">
           About
         </a>
-        <a className="nav-links" href="#experience">
-          Experience
+        <a className="nav-links nav-dropdown-a nd-a1" href="#experience">
+          Work
         </a>
-        <a className="nav-links" href="#projects">
+        <a className="nav-links nav-dropdown-a nd-a2" href="#projects">
           Projects
         </a>
-        <a className="nav-links" href="#contact">
+        <a className="nav-links nav-dropdown-a nd-a4" href="#contact">
           Contact
         </a>
       </div>

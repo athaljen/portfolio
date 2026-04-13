@@ -6,6 +6,7 @@ import '@/styles/contact.css'
 import '@/styles/experience.css'
 import '@/styles/projects.css'
 import '@/styles/about.css'
+import '@/styles/header.css'
 // import "@/styles/resume.css";
 
 export default function App({ Component, pageProps }: AppProps) {
