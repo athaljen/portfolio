@@ -43,15 +43,20 @@ const ProjectDetailsModal = forwardRef<ModalRefType, any>((_, ref) => {
         content: {
           backgroundColor: '#151515',
           border: 'none',
-          borderRadius: '10px',
+          borderRadius: '18px',
           maxWidth: '786px',
-          padding: '0px 20px 30px 20px',
-          width: '100%',
-          margin: '0 auto',
+          padding: '0px 16px',
+          placeSelf: 'center',
+          right: '20px',
+          left: '20px',
+          overflowY: 'auto',
+          maxHeight: '90vh',
+          flexGrow: 1,
           color: '#ffffff',
-          top: '65px',
-          bottom: '40px',
           scrollbarWidth: 'none',
+          borderWidth: '1px',
+          borderColor: '#ffffff20',
+          borderStyle: 'solid',
         },
         overlay: {
           backgroundColor: 'rgba(0, 0, 0, 0.6)',
@@ -62,109 +67,113 @@ const ProjectDetailsModal = forwardRef<ModalRefType, any>((_, ref) => {
         },
       }}
     >
-      <div
-        style={{
-          position: 'sticky',
-          top: 0,
-          zIndex: 1,
-          background: 'rgba(21, 21, 21, 0.65)',
-          backdropFilter: 'blur(25.5px)',
-          WebkitBackdropFilter: 'blur(25.5px)',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          padding: '15px',
-          margin: '-20px -20px 20px -20px',
-          borderBottom: '1px solid #ffffff20',
-        }}
-      >
-        <h2>{data?.title}</h2>
-        <button
-          onClick={handleClose}
+      <div style={{ paddingBottom: 30 }}>
+        <div
           style={{
-            height: 40,
-            width: 40,
-            borderRadius: '50%',
-            backgroundColor: 'transparent',
-            cursor: 'pointer',
+            position: 'sticky',
+            top: 0,
+            zIndex: 1,
+            background: 'rgba(21, 21, 21, 0.65)',
+            backdropFilter: 'blur(25.5px)',
+            WebkitBackdropFilter: 'blur(25.5px)',
             display: 'flex',
-            justifyContent: 'center',
+            justifyContent: 'space-between',
             alignItems: 'center',
-            border: '1px solid #ffffff75',
+            padding: '15px',
+            margin: '-20px -20px 20px -20px',
+            borderBottom: '1px solid #ffffff20',
           }}
         >
-          <i
-            className="fa-solid fa-xmark"
-            style={{ color: '#ffffff', fontSize: 20 }}
-          ></i>
-        </button>
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          aspectRatio: '2/1',
-          position: 'relative',
-          marginBottom: 20,
-          marginTop: 30,
-        }}
-      >
-        <Image src={data?.image} alt={data?.title} fill />
-      </div>
-      <p style={{ margin: '15px 0px', color: '#ffffffb3' }}>
-        {data?.description}
-      </p>
-
-      <strong>Contributions:</strong>
-      <ul
-        style={{
-          marginLeft: '25px',
-          marginBottom: '15px',
-          fontSize: '14px',
-        }}
-      >
-        {data?.contributions.map((contribution, index) => (
-          <li key={index}>{contribution}</li>
-        ))}
-      </ul>
-
-      <strong>Tech Stack:</strong>
-      <ul className="project-tech-stack">
-        {data?.techStack.map((tech, index) => (
-          <p key={index}>{tech}</p>
-        ))}
-      </ul>
-
-      <div style={{ display: 'flex', gap: '15px', marginTop: '15px' }}>
-        {data?.android && (
-          <a
-            className="social-icon"
-            href={data.android}
-            target="_blank"
-            rel="noopener noreferrer"
+          <h2>{data?.title}</h2>
+          <button
+            onClick={handleClose}
+            style={{
+              height: 40,
+              width: 40,
+              borderRadius: '50%',
+              backgroundColor: 'transparent',
+              cursor: 'pointer',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              border: '1px solid #ffffff75',
+            }}
           >
-            <i className="fa-brands fa-android"></i>
-          </a>
-        )}
-        {data?.ios && (
-          <a
-            className="social-icon"
-            href={data.ios}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fa-brands fa-apple"></i>
-          </a>
-        )}
-        {data?.website && (
-          <a
-            className="social-icon"
-            href={data.website}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fa-solid fa-globe"></i>
-          </a>
-        )}
+            <i
+              className="fa-solid fa-xmark"
+              style={{ color: '#ffffff', fontSize: 20 }}
+            ></i>
+          </button>
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            aspectRatio: '2/1',
+            position: 'relative',
+            marginBottom: 20,
+            marginTop: 30,
+            borderRadius: '12px',
+            overflow: 'hidden',
+          }}
+        >
+          <Image src={data?.image} alt={data?.title} fill />
+        </div>
+        <p style={{ margin: '15px 0px', color: '#ffffffb3' }}>
+          {data?.description}
+        </p>
+
+        <strong>Contributions:</strong>
+        <ul
+          style={{
+            marginLeft: '25px',
+            marginBottom: '15px',
+            fontSize: '14px',
+          }}
+        >
+          {data?.contributions.map((contribution, index) => (
+            <li key={index}>{contribution}</li>
+          ))}
+        </ul>
+
+        <strong>Tech Stack:</strong>
+        <ul className="project-tech-stack">
+          {data?.techStack.map((tech, index) => (
+            <p key={index}>{tech}</p>
+          ))}
+        </ul>
+
+        <div style={{ display: 'flex', gap: '15px', marginTop: '15px' }}>
+          {data?.android && (
+            <a
+              className="social-icon"
+              href={data.android}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fa-brands fa-android"></i>
+            </a>
+          )}
+          {data?.ios && (
+            <a
+              className="social-icon"
+              href={data.ios}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fa-brands fa-apple"></i>
+            </a>
+          )}
+          {data?.website && (
+            <a
+              className="social-icon"
+              href={data.website}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fa-solid fa-globe"></i>
+            </a>
+          )}
+        </div>
       </div>
     </Modal>
   )

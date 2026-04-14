@@ -24,11 +24,7 @@ const ProjectCard = ({ data, onReadMore }: Props) => {
           <p>{data.date}</p>
           <p className="project-card-overlay-desc">{data.description}</p>
         </div>
-        <div
-          role="button"
-          className="project-details-btn"
-          // onClick={() => onReadMore?.(data)}
-        >
+        <div role="button" className="project-details-btn">
           Read More
         </div>
       </div>
