@@ -3,7 +3,7 @@ import { memo, useCallback, useState } from 'react'
 import { useForm } from 'react-hook-form'
 
 import { PERSONAL_LINKS } from '@/constants'
-import './contact.module.css'
+import './contact.css'
 
 type FormInputs = {
   name: string

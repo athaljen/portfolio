@@ -1,7 +1,7 @@
 import workExperienceData from '@/data/workExperienceData'
 
 import ExpCard from '../main/ExpCard'
-import './experience.module.css'
+import './experience.css'
 
 export default function Experience() {
   return (

@@ -15,7 +15,7 @@ const ProjectCard = ({ data, onReadMore }: Props) => {
       onClick={() => onReadMore?.(data)}
     >
       <img src={data?.image.src} />
-      <div className="project-card-overlay">
+      <div className="project-card-overlay backdrop-blur-xs">
         <div>
           <h4>{data.title}</h4>
           <p>{data.type}</p>

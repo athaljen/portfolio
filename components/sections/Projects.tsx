@@ -7,7 +7,7 @@ import { ProjectDataType } from '@/types/ProjectTypes'
 
 import ProjectCard from '../main/ProjectCard'
 import ProjectDetailsModal from '../modals/ProjectDetailsModal'
-import './projects.module.css'
+import './projects.css'
 
 function Projects() {
   const projectDetailsModal = useRef<ModalRefType>(null)

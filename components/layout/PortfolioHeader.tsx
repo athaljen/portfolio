@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { useEffect } from 'react'
 
-import styles from './portfolioHeader.module.css'
+import './portfolioHeader.css'
 
 export default function PortfolioHeader() {
   function toggleMenu(event: React.MouseEvent<HTMLDivElement>) {
@@ -75,55 +75,49 @@ export default function PortfolioHeader() {
 
   return (
     <>
-      <header className={styles['portfolio-header']}>
-        <div className={styles['header-container']}>
-          <Link className={styles['logo']} href="/">
+      <header className="portfolio-header">
+        <div className="header-container backdrop-blur-xl">
+          <Link className="logo" href="/">
             <span>J</span>en
           </Link>
-          <nav className={styles['portfolio-nav']}>
-            <a className={styles['nav-links']} href="#home">
+          <nav className="portfolio-nav">
+            <a className="nav-links" href="#home">
               Home
             </a>
-            <a className={styles['nav-links']} href="#about">
+            <a className="nav-links" href="#about">
               About
             </a>
-            <a className={styles['nav-links']} href="#experience">
+            <a className="nav-links" href="#experience">
               Work
             </a>
-            <a className={styles['nav-links']} href="#projects">
+            <a className="nav-links" href="#projects">
               Projects
             </a>
-            <a className={styles['nav-links']} href="#contact">
+            <a className="nav-links" href="#contact">
               Contact
             </a>
           </nav>
-          <div className={styles['menu-icon']} onClick={toggleMenu}>
+          <div className="menu-icon" onClick={toggleMenu}>
             <span></span>
             <span></span>
             <span></span>
           </div>
         </div>
       </header>
-      <div className={styles['nav-dropdown']} id="nav-menu">
-        <a className={styles['nav-links nav-dropdown-a nd-a5']} href="#home">
+      <div className="nav-dropdown" id="nav-menu">
+        <a className="nav-links nav-dropdown-a nd-a5" href="#home">
           Home
         </a>
-        <a className={styles['nav-links nav-dropdown-a nd-a3']} href="#about">
+        <a className="nav-links nav-dropdown-a nd-a3" href="#about">
           About
         </a>
-        <a
-          className={styles['nav-links nav-dropdown-a nd-a1']}
-          href="#experience"
-        >
+        <a className="nav-links nav-dropdown-a nd-a1" href="#experience">
           Work
         </a>
-        <a
-          className={styles['nav-links nav-dropdown-a nd-a2']}
-          href="#projects"
-        >
+        <a className="nav-links nav-dropdown-a nd-a2" href="#projects">
           Projects
         </a>
-        <a className={styles['nav-links nav-dropdown-a nd-a4']} href="#contact">
+        <a className="nav-links nav-dropdown-a nd-a4" href="#contact">
           Contact
         </a>
       </div>

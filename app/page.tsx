@@ -10,9 +10,9 @@ export default function App() {
     <>
       <Home />
       <About />
-      {/* <Experience /> */}
-      {/* <Projects /> */}
-      {/* <ContactMe /> */}
+      <Experience />
+      <Projects />
+      <ContactMe />
     </>
   )
 }
