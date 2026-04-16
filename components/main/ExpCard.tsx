@@ -1,0 +1,26 @@
+import React, { memo } from 'react'
+
+type Props = {
+  title: string
+  date: string
+  company: string
+  location: string
+  description: string
+}
+
+const ExpCard = ({ company, date, description, location, title }: Props) => {
+  return (
+    <div className="exp-card">
+      <h3>
+        {title} <span>({date})</span>
+      </h3>
+      <h4>
+        {company}
+        <span>~ {location}</span>
+      </h4>
+      <p>{description}</p>
+    </div>
+  )
+}
+
+export default memo(ExpCard)

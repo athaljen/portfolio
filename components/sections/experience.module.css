@@ -1,0 +1,31 @@
+.exp-container {
+  display: grid;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .exp-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.exp-card {
+  border-radius: 15px;
+  padding: 13px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow:
+    inset 19px 19px 35px #1a1a1a,
+    inset -19px -19px 35px #2e2e2e;
+}
+.exp-card:hover {
+  box-shadow: 0px 0px 10px var(--primary);
+  transform: translateY(-2px);
+  transition: 0.3s;
+}
+.exp-card span {
+  color: var(--gray);
+  font-size: small;
+}
+.exp-card p {
+  margin-top: 7px;
+  font-size: 0.9rem;
+}

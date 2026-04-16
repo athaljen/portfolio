@@ -1,0 +1,7 @@
+.text-primary {
+  color: var(--primary);
+}
+
+section {
+  min-height: 100vh;
+}
