@@ -24,6 +24,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable}  h-full antialiased`}>
+      <head>
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          rel="stylesheet"
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <PortfolioHeader />
         <main className="safe-container">{children}</main>

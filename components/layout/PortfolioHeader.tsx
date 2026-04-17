@@ -1,11 +1,42 @@
 'use client'
 import Link from 'next/link'
-import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
+import { memo, useCallback, useEffect } from 'react'
 
 import './portfolioHeader.css'
 
-export default function PortfolioHeader() {
-  function toggleMenu(event: React.MouseEvent<HTMLDivElement>) {
+const navLinks = [
+  {
+    name: 'Home',
+    href: '/#home',
+    dropdownClass: 'nav-links nav-dropdown-a nd-a5',
+  },
+  {
+    name: 'About',
+    href: '/#about',
+    dropdownClass: 'nav-links nav-dropdown-a nd-a3',
+  },
+  {
+    name: 'Work',
+    href: '/#experience',
+    dropdownClass: 'nav-links nav-dropdown-a nd-a1',
+  },
+  {
+    name: 'Projects',
+    href: '/#projects',
+    dropdownClass: 'nav-links nav-dropdown-a nd-a2',
+  },
+  {
+    name: 'Contact',
+    href: '/#contact',
+    dropdownClass: 'nav-links nav-dropdown-a nd-a4',
+  },
+]
+
+function PortfolioHeader() {
+  const pathname = usePathname()
+
+  const toggleMenu = useCallback((event: React.MouseEvent<HTMLDivElement>) => {
     const menuIcon = event.currentTarget
     menuIcon.classList.toggle('active')
 
@@ -13,7 +44,7 @@ export default function PortfolioHeader() {
     navLinks.forEach((link) => {
       link.classList.toggle('show')
     })
-  }
+  }, [])
 
   useEffect(() => {
     const sections = document.querySelectorAll('section')
@@ -40,14 +71,14 @@ export default function PortfolioHeader() {
             dropdownLinks.forEach((link) => link.classList.remove('active'))
 
             const activeHeaderLink = document.querySelector(
-              `header nav .nav-links[href="#${entry.target.id}"]`,
+              `header nav .nav-links[href="/#${entry.target.id}"]`,
             )
             if (activeHeaderLink) {
               activeHeaderLink.classList.add('active')
             }
 
             const activeDropdownLink = document.querySelector(
-              `.nav-dropdown .nav-links[href="#${entry.target.id}"]`,
+              `.nav-dropdown .nav-links[href="/#${entry.target.id}"]`,
             )
             if (activeDropdownLink) {
               activeDropdownLink.classList.add('active')
@@ -70,32 +101,25 @@ export default function PortfolioHeader() {
 
     return () => {
       observer.disconnect()
+      dropdownLinks.forEach((link) => {
+        link.removeEventListener('click', hideDropdownLinks)
+      })
     }
-  }, [])
+  }, [pathname])
 
   return (
     <>
       <header className="portfolio-header">
         <div className="header-container backdrop-blur-xl">
-          <Link className="logo" href="/">
+          <Link className="logo" href="/#home">
             <span>J</span>en
           </Link>
           <nav className="portfolio-nav">
-            <a className="nav-links" href="#home">
-              Home
-            </a>
-            <a className="nav-links" href="#about">
-              About
-            </a>
-            <a className="nav-links" href="#experience">
-              Work
-            </a>
-            <a className="nav-links" href="#projects">
-              Projects
-            </a>
-            <a className="nav-links" href="#contact">
-              Contact
-            </a>
+            {navLinks.map((link) => (
+              <Link key={link.name} className="nav-links" href={link.href}>
+                {link.name}
+              </Link>
+            ))}
           </nav>
           <div className="menu-icon" onClick={toggleMenu}>
             <span></span>
@@ -105,22 +129,14 @@ export default function PortfolioHeader() {
         </div>
       </header>
       <div className="nav-dropdown" id="nav-menu">
-        <a className="nav-links nav-dropdown-a nd-a5" href="#home">
-          Home
-        </a>
-        <a className="nav-links nav-dropdown-a nd-a3" href="#about">
-          About
-        </a>
-        <a className="nav-links nav-dropdown-a nd-a1" href="#experience">
-          Work
-        </a>
-        <a className="nav-links nav-dropdown-a nd-a2" href="#projects">
-          Projects
-        </a>
-        <a className="nav-links nav-dropdown-a nd-a4" href="#contact">
-          Contact
-        </a>
+        {navLinks.map((link) => (
+          <Link key={link.name} className={link.dropdownClass} href={link.href}>
+            {link.name}
+          </Link>
+        ))}
       </div>
     </>
   )
 }
+
+export default memo(PortfolioHeader)

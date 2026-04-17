@@ -60,11 +60,12 @@ const HomeChangingText = () => {
   }, [displayText, isDeleting, currentSkill, skillIndex])
 
   return (
-    <div className="home-changing-text-container">
-      I know
-      <div className="changing-text">
+    <div className="flex items-center gap-3 text-xl font-semibold my-5">
+      <span>I know</span>
+
+      <div className="whitespace-nowrap overflow-hidden relative text-primary">
         {displayText}
-        <span className="cursor">|</span>
+        <span className="ml-1 font-light animate-[blink_0.7s_infinite]">|</span>
       </div>
     </div>
   )

@@ -1,13 +1,14 @@
 import workExperienceData from '@/data/workExperienceData'
 
 import ExpCard from '../main/ExpCard'
-import './experience.css'
 
 export default function Experience() {
   return (
-    <section id="experience">
-      <h2 className="section-title">Work Experience</h2>
-      <div className="exp-container">
+    <section id="experience" className="min-h-screen">
+      <h2 className="text-primary text-2xl font-bold mb-8 text-center">
+        Work Experience
+      </h2>
+      <div className="grid gap-5 md:grid-cols-2">
         {workExperienceData.map((exp, idx) => (
           <ExpCard
             key={idx}

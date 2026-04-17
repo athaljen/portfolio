@@ -43,6 +43,7 @@ const ProjectDetailsModal = forwardRef<ModalRefType, Props>((_, ref) => {
       isOpen={Boolean(data)}
       onRequestClose={handleClose}
       preventScroll={true}
+      ariaHideApp={false}
       style={{
         content: {
           backgroundColor: '#151515',

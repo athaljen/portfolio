@@ -3,7 +3,6 @@ import { memo, useCallback, useState } from 'react'
 import { useForm } from 'react-hook-form'
 
 import { PERSONAL_LINKS } from '@/constants'
-import './contact.css'
 
 type FormInputs = {
   name: string
@@ -38,66 +37,97 @@ function ContactMe() {
   }, [])
 
   return (
-    <section id="contact">
-      <h2 className="section-title">Contact Me</h2>
-      <div className="contact-form">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div>
+    <section id="contact" className="mt-20 !min-h-[60dvh]">
+      <h2 className="text-primary text-2xl font-bold mb-8 text-center">
+        Contact Me
+      </h2>
+      <div className="flex flex-1 flex-column items-center mt-10 justify-center">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="flex flex-col gap-4 w-full max-w-lg"
+        >
+          <div className="flex flex-col">
             <input
               type="text"
               id="name"
+              className="rounded-md p-3 text-sm text-[var(--text)] bg-gray-50/10 border border-gray-50/20 outline-none"
               placeholder="Name"
               {...register('name', { required: 'Name is required' })}
             />
-            <p className="contact-me-error">{errors.name?.message}</p>
+            <p className="text-red-400 !text-xs self-end mt-1">
+              {errors.name?.message}
+            </p>
           </div>
 
-          <div>
+          <div className="flex flex-col">
             <input
               type="email"
               id="email"
+              className="rounded-md p-3 text-sm text-[var(--text)] bg-gray-50/10 border border-gray-50/20 outline-none"
               placeholder="Email"
               {...register('email', { required: 'Email is required' })}
             />
-            <p className="contact-me-error">{errors.email?.message}</p>
+            <p className="text-red-400 !text-xs self-end mt-1">
+              {errors.email?.message}
+            </p>
           </div>
 
-          <input
-            type="number"
-            id="phone"
-            placeholder="Phone"
-            {...register('phone')}
-          />
-
-          <div>
+          <div className="flex flex-col">
             <textarea
               id="message"
               placeholder="Message"
+              className="rounded-md h-[100px] p-3 text-sm text-[var(--text)] bg-gray-50/10 border border-gray-50/20 outline-none resize-none"
               {...register('message', { required: 'Message is required' })}
             ></textarea>
-            <p className="contact-me-error">{errors.message?.message}</p>
+            <p className="text-red-400 !text-xs self-end mt-1">
+              {errors.message?.message}
+            </p>
           </div>
 
-          <button type="submit" className="send-message">
+          <button
+            type="submit"
+            className="primary-btn self-center mt-6"
+            disabled={sending}
+          >
             {sending ? 'Sending...' : 'Send Message'}
           </button>
         </form>
       </div>
 
-      <div className="contact-icons">
-        <a href={PERSONAL_LINKS.linkedin} target="_blank">
+      <div className="flex justify-center gap-4 mt-20">
+        <a
+          className="link-icon-btn"
+          href={PERSONAL_LINKS.linkedin}
+          target="_blank"
+        >
           <i className="fa-brands fa-linkedin-in"></i>
         </a>
-        <a href={PERSONAL_LINKS.github} target="_blank">
+        <a
+          className="link-icon-btn"
+          href={PERSONAL_LINKS.github}
+          target="_blank"
+        >
           <i className="fa-brands fa-github"></i>
         </a>
-        <a href={PERSONAL_LINKS.email} target="_blank">
+        <a
+          className="link-icon-btn"
+          href={PERSONAL_LINKS.email}
+          target="_blank"
+        >
           <i className="fa-solid fa-envelope"></i>
         </a>
-        <a href={PERSONAL_LINKS.twitter} target="_blank">
+        <a
+          className="link-icon-btn"
+          href={PERSONAL_LINKS.twitter}
+          target="_blank"
+        >
           <i className="fa-brands fa-x-twitter"></i>
         </a>
-        <a href={PERSONAL_LINKS.instagram} target="_blank">
+        <a
+          className="link-icon-btn"
+          href={PERSONAL_LINKS.instagram}
+          target="_blank"
+        >
           <i className="fa-brands fa-instagram"></i>
         </a>
       </div>

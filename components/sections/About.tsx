@@ -4,11 +4,11 @@ function About() {
   return (
     <section
       id="about"
-      className="bg-[radial-gradient(circle,_#0940747a,_#09407443_30%,_transparent_60%,_transparent_100%)]"
+      className="min-h-screen bg-[radial-gradient(circle,_#0940747a,_#09407443_30%,_transparent_60%,_transparent_100%)]"
     >
-      <h1 className="text-primary text-2xl font-bold mb-8 text-center">
+      <h2 className="text-primary text-2xl font-bold mb-8 text-center">
         About Me
-      </h1>
+      </h2>
 
       <div>
         <p>
