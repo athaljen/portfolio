@@ -2,6 +2,13 @@
 import { memo, useCallback, useState } from 'react'
 import { useForm } from 'react-hook-form'
 
+import {
+  EnvelopeSvg,
+  GithubSvg,
+  InstagramSvg,
+  LinkedInSvg,
+  XTwitterSvg,
+} from '@/assets/text-svg-icons'
 import { PERSONAL_LINKS } from '@/constants'
 
 type FormInputs = {
@@ -100,35 +107,35 @@ function ContactMe() {
           href={PERSONAL_LINKS.linkedin}
           target="_blank"
         >
-          <i className="fa-brands fa-linkedin-in"></i>
+          <LinkedInSvg className="w-5 h-5" fill="currentColor" />
         </a>
         <a
           className="link-icon-btn"
           href={PERSONAL_LINKS.github}
           target="_blank"
         >
-          <i className="fa-brands fa-github"></i>
+          <GithubSvg className="w-5 h-5" fill="currentColor" />
         </a>
         <a
           className="link-icon-btn"
           href={PERSONAL_LINKS.email}
           target="_blank"
         >
-          <i className="fa-solid fa-envelope"></i>
+          <EnvelopeSvg className="w-5 h-5" fill="currentColor" />
         </a>
         <a
           className="link-icon-btn"
           href={PERSONAL_LINKS.twitter}
           target="_blank"
         >
-          <i className="fa-brands fa-x-twitter"></i>
+          <XTwitterSvg className="w-5 h-5" fill="currentColor" />
         </a>
         <a
           className="link-icon-btn"
           href={PERSONAL_LINKS.instagram}
           target="_blank"
         >
-          <i className="fa-brands fa-instagram"></i>
+          <InstagramSvg className="w-5 h-5" fill="currentColor" />
         </a>
       </div>
     </section>

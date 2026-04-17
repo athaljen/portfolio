@@ -4,6 +4,7 @@ export type ProjectDataType = {
   title: string
   type: string
   date: string
+  tags: string[]
   description: string
   contributions: string[]
   techStack: string[]

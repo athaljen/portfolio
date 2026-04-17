@@ -16,6 +16,7 @@ const projectsData: ProjectDataType[] = [
   {
     title: 'Tamil Nadu - NHIS',
     type: 'Mobile Application',
+    tags: ['Mobile'],
     date: 'june 2022 - december 2022',
     description:
       'TNNHIS is a comprehensive Hospital Information System (HIS) designed for government hospitals in Tamil Nadu. The system streamlines hospital operations, enhances patient care, and improves overall efficiency. It includes modules for patient registration, appointment scheduling, electronic medical records (EMR), billing, inventory management, and reporting.',
@@ -51,6 +52,7 @@ const projectsData: ProjectDataType[] = [
   {
     title: 'Kahani Kids',
     type: 'Mobile Application',
+    tags: ['Mobile'],
     date: 'june 2022 - december 2022',
     description:
       'Kahani Kids is a storytelling mobile application designed for children. The app offers a collection of interactive stories that engage young readers with colorful illustrations, animations, and audio narration. It aims to foster a love for reading and enhance literacy skills among children.',
@@ -96,6 +98,7 @@ const projectsData: ProjectDataType[] = [
     description:
       'F&F Bargains is a mobile application  offers users the best deals and discounts on a wide range of products. The app provides a seamless shopping experience, allowing users to browse through various categories, compare prices, and make purchases with ease.',
     type: 'Mobile Application',
+    tags: ['Mobile'],
     date: 'march 2023 - june 2023',
     contributions: [
       'Designed and developed the mobile application from scratch',
@@ -140,6 +143,7 @@ const projectsData: ProjectDataType[] = [
   {
     title: 'Aap Ka Bazar - Online Grocery',
     type: 'Mobile Application',
+    tags: ['Mobile'],
     date: 'june 2023 - august 2023',
     description:
       'Aap Ka Bazar is a mobile application that provides users with a convenient and efficient way to shop for groceries online. The app offers a wide range of products, including fresh produce, dairy, snacks, and household essentials. Users can easily browse through different categories, add items to their cart, and place orders for home delivery or in-store pickup.',
@@ -177,6 +181,7 @@ const projectsData: ProjectDataType[] = [
   {
     title: 'Iyal App',
     type: 'Mobile Application',
+    tags: ['Mobile'],
     date: 'september 2023 - present',
     description:
       'Iyal is an educational mobile application designed to provide students with a comprehensive learning experience. The app offers a wide range of educational content, including interactive lessons, quizzes, and study materials across various subjects. Iyal aims to enhance the learning process by providing engaging and interactive resources for students of all ages.',
@@ -221,6 +226,7 @@ const projectsData: ProjectDataType[] = [
   {
     title: 'Iyal Web - Educational Platform',
     type: 'Web Application',
+    tags: ['Web'],
     date: 'september 2023 - present',
     description:
       'Iyal Web is an educational platform designed to provide students with a comprehensive learning experience. The web application offers a wide range of educational content, including interactive lessons, quizzes, and study materials across various subjects. Iyal Web aims to enhance the learning process by providing engaging and interactive resources for students of all ages.',
@@ -264,6 +270,7 @@ const projectsData: ProjectDataType[] = [
   {
     title: 'F&F Bargains, E-commerce',
     type: 'Web Application',
+    tags: ['Web'],
     date: 'march 2023 - june 2023',
     description:
       'F&F Bargains is a web application that offers users the best deals and discounts on a wide range of products. The app provides a seamless shopping experience, allowing users to browse through various categories, compare prices, and make purchases with ease.',
@@ -306,6 +313,7 @@ const projectsData: ProjectDataType[] = [
   {
     title: 'Joouly',
     type: 'Mobile Application',
+    tags: ['Mobile'],
     date: 'june 2023 - august 2023',
     description:
       'Joouly is a social media mobile application that provides users with a platform to connect, share, and engage with others. The app offers features such as user profiles, news feed, messaging, and content sharing. Joouly aims to create a vibrant online community where users can express themselves and connect with like-minded individuals.',
@@ -336,6 +344,7 @@ const projectsData: ProjectDataType[] = [
   {
     title: 'MedMinder',
     type: 'Mobile Application',
+    tags: ['Mobile'],
     date: 'november 2023 - present',
     description:
       'MedMinder is a mobile application designed to help users manage their medication schedules effectively. The app allows users to set reminders for taking their medications, track their medication history, and receive notifications for upcoming doses. It aims to improve medication adherence and ensure that users never miss a dose.',
@@ -368,6 +377,7 @@ const projectsData: ProjectDataType[] = [
   {
     title: 'GM Klang',
     type: 'Web & Mobile Application',
+    tags: ['Web', 'Mobile'],
     date: 'june 2023 - august 2023',
     description:
       'GM Klang is a music streaming mobile application that offers users access to a vast library of songs, albums, and playlists. The app provides features such as personalized recommendations, offline listening, and social sharing. GM Klang aims to enhance the music listening experience by providing a user-friendly interface and high-quality audio streaming.',
@@ -400,6 +410,7 @@ const projectsData: ProjectDataType[] = [
   {
     title: 'The Claim Partner',
     type: 'Mobile Application',
+    tags: ['Mobile'],
     date: 'october 2023 - present',
     description:
       'The Claim Partner is a web application designed to streamline the insurance claims management process. The platform provides insurance companies and policyholders with a comprehensive solution for submitting, tracking, and managing insurance claims. It offers features such as claim submission, document upload, real-time status updates, and communication tools to facilitate efficient claims processing.',

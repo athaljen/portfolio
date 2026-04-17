@@ -1,5 +1,5 @@
 import { HTMLAttributes, memo } from 'react'
-import './revealX.module.css'
+import './revealX.css'
 
 type Props = HTMLAttributes<HTMLDivElement>
 

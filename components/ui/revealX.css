@@ -1,5 +1,4 @@
 .revealX {
-  display: inline-block;
   mask-image: linear-gradient(to right, black 0%, black 25%, transparent 50%);
   mask-size: 400% 100%;
   mask-position: 100% 0;
