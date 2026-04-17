@@ -9,6 +9,8 @@ import iyalApp from '../assets/projects/iyal-app.png'
 import joouly from '../assets/projects/joouly.png'
 import kahaniKids from '../assets/projects/kahani-kids.png'
 import medicineReminder from '../assets/projects/medicine-reminder.png'
+import rnDynamicShortcut from '../assets/projects/rn-dynamic-shortcut.png'
+import rnPipMode from '../assets/projects/rn-pip-mode.png'
 import theClaimPartner from '../assets/projects/the-claim-partner.png'
 import tnnhis from '../assets/projects/tnnhis.png'
 
@@ -441,6 +443,56 @@ const projectsData: ProjectDataType[] = [
     android: '',
     ios: '',
     website: 'https://theclaimpartner.com',
+  },
+  {
+    title: 'React Native Dynamic Shortcut',
+    description:
+      'A React Native library that enables developers to easily implement dynamic shortcuts in their mobile applications, enhancing user engagement and improving app navigation.',
+    type: 'Library',
+    tags: ['Personal'],
+    date: 'sept 2024',
+    contributions: [
+      'Developed a React Native library that enables developers to easily implement dynamic shortcuts in their mobile applications.',
+      'The library provides a simple and intuitive API for creating and managing dynamic shortcuts, allowing developers to enhance user engagement and improve app navigation.',
+      'Implemented support for both Android and iOS platforms, ensuring compatibility across a wide range of devices.',
+      'Published the library on npm, making it accessible to the React Native community and encouraging contributions from other developers.',
+    ],
+    techStack: [
+      'React Native',
+      'JavaScript',
+      'TypeScript',
+      'Android Shortcuts API',
+      'iOS Home Screen Quick Actions',
+    ],
+    image: rnDynamicShortcut,
+    android: '',
+    ios: '',
+    website: 'https://www.npmjs.com/package/react-native-dynamic-shortcut',
+  },
+  {
+    title: 'React Native PiP Mode',
+    description:
+      'A React Native library that enables developers to easily implement Picture-in-Picture (PiP) mode in their mobile applications, allowing users to continue watching videos or using the app while multitasking.',
+    type: 'Library',
+    tags: ['Personal'],
+    date: 'sept 2024',
+    contributions: [
+      'Developed a React Native library that enables developers to easily implement Picture-in-Picture (PiP) mode in their mobile applications.',
+      'The library provides a simple and intuitive API for creating and managing PiP mode, allowing users to continue watching videos or using the app while multitasking.',
+      'Implemented support for both Android and iOS platforms, ensuring compatibility across a wide range of devices.',
+      'Published the library on npm, making it accessible to the React Native community and encouraging contributions from other developers.',
+    ],
+    techStack: [
+      'React Native',
+      'JavaScript',
+      'TypeScript',
+      'Android PiP API',
+      'iOS Picture-in-Picture',
+    ],
+    image: rnPipMode,
+    android: '',
+    ios: '',
+    website: 'https://www.npmjs.com/package/react-native-pip-mode',
   },
 ]
 

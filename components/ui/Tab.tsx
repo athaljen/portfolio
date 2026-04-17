@@ -25,7 +25,7 @@ type TabItemProps = {
 } & HTMLAttributes<HTMLButtonElement>
 
 const listItemClass =
-  'px-3 py-1 text-sm font-medium text-gray-500 hover:text-sky-400 cursor-pointer'
+  'flex items-center px-3 py-1 text-sm font-medium text-gray-500 hover:text-sky-400 cursor-pointer'
 const defaultActive =
   'text-primary custom-tab-active rounded-full text-sm font-medium'
 

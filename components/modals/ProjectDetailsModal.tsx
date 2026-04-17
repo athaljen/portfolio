@@ -92,7 +92,7 @@ const ProjectDetailsModal = forwardRef<ModalRefType, Props>((_, ref) => {
             <XSvg className="w-4 h-4" fill="currentColor" />
           </button>
         </div>
-        <div className="relative w-full aspect-video rounded-lg overflow-hidden mb-5 mt-8">
+        <div className="relative w-full aspect-video rounded-lg overflow-hidden mb-5 mt-4">
           <Image src={data?.image} alt={data?.title} fill />
         </div>
         <p className="my-4 text-sm text-[#ffffffb3] leading-relaxed">

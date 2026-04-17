@@ -12,6 +12,7 @@ export default function Experience() {
         {workExperienceData.map((exp, idx) => (
           <ExpCard
             key={idx}
+            index={idx}
             title={exp.title}
             date={exp.date}
             company={exp.company}

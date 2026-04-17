@@ -1,4 +1,5 @@
 'use client'
+import { motion } from 'framer-motion'
 import { memo, useCallback, useState } from 'react'
 import { useForm } from 'react-hook-form'
 
@@ -44,7 +45,14 @@ function ContactMe() {
   }, [])
 
   return (
-    <section id="contact" className="mt-20 !min-h-[60dvh]">
+    <motion.section
+      id="contact"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
+      viewport={{ once: true }}
+      className="mt-20 !min-h-[60dvh]"
+    >
       <h2 className="text-primary text-2xl font-bold mb-8 text-center">
         Contact Me
       </h2>
@@ -138,7 +146,7 @@ function ContactMe() {
           <InstagramSvg className="w-5 h-5" fill="currentColor" />
         </a>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

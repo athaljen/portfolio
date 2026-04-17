@@ -1,16 +1,30 @@
 'use client'
 import { motion, AnimatePresence } from 'framer-motion'
-import { memo, useCallback, useRef, useState } from 'react'
+import { memo, JSX, useCallback, useRef, useState } from 'react'
 
+import {
+  GlobeSvg,
+  LibrarySvg,
+  MobileSvg,
+  UserSvg,
+} from '@/assets/text-svg-icons'
 import projectsData from '@/data/projects-data'
 import { ModalRefType } from '@/types/other-types'
-import { ProjectDataType } from '@/types/ProjectTypes'
+import { ProjectDataType, TabType } from '@/types/ProjectTypes'
 
 import ProjectCard from '../main/ProjectCard'
 import ProjectDetailsModal from '../modals/ProjectDetailsModal'
 import { Tab, TabItem, TabList } from '../ui/Tab'
 
-type TabType = 'All' | 'Mobile' | 'Web' | 'Personal'
+const tabItems: {
+  name: TabType
+  Icon: (props: React.SVGProps<SVGSVGElement>) => JSX.Element
+}[] = [
+  { name: 'All', Icon: LibrarySvg },
+  { name: 'Mobile', Icon: MobileSvg },
+  { name: 'Web', Icon: GlobeSvg },
+  { name: 'Personal', Icon: UserSvg },
+]
 
 function Projects() {
   const [activeTab, setActiveTab] = useState<TabType>('All')
@@ -28,20 +42,29 @@ function Projects() {
   }, [])
 
   return (
-    <section id="projects" className="min-h-screen">
+    <motion.section
+      id="projects"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: 'easeOut', delay: 0.3 }}
+      viewport={{ once: true }}
+      className="min-h-screen"
+    >
       <h2 className="text-primary text-2xl font-bold mb-8 text-center">
         Projects
       </h2>
 
       <Tab>
         <TabList>
-          {(['All', 'Mobile', 'Web', 'Personal'] as TabType[]).map((tab) => (
+          {tabItems.map((tab) => (
             <TabItem
-              key={tab}
-              active={activeTab === tab}
-              onClick={() => setActiveTab(tab)}
+              key={tab.name}
+              active={activeTab === tab.name}
+              onClick={() => setActiveTab(tab.name)}
+              className="px-4"
             >
-              {tab}
+              <tab.Icon className="w-5 h-5" fill="currentColor" />
+              <span className="ml-2 mt-0.5">{tab.name}</span>
             </TabItem>
           ))}
         </TabList>
@@ -63,7 +86,7 @@ function Projects() {
       </AnimatePresence>
 
       <ProjectDetailsModal ref={projectDetailsModal} />
-    </section>
+    </motion.section>
   )
 }
 
