@@ -1,0 +1,92 @@
+.resume-page {
+  --normal-text: 13.1px;
+  --small-text: 11px;
+  font-family: Inter;
+  color: #000000;
+  margin-top: 70px;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.6s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.resume-name {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 600 !important;
+}
+.resume-header-title {
+  font-size: 16px !important;
+  margin-top: 20px;
+  border-bottom: 1px solid #626262;
+  padding-bottom: 2px;
+  margin-bottom: 8px;
+  font-weight: 600 !important;
+}
+.resume-links {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: var(--normal-text);
+}
+.resume-texts {
+  padding: 0px;
+  margin: 4px 0px;
+  font-size: var(--normal-text) !important;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.resume-ul {
+  padding-left: 26px;
+  margin: 0px;
+  list-style: disc;
+}
+.resume-ul li {
+  padding: 0px;
+  margin: 2px 0;
+  font-size: var(--normal-text);
+  font-weight: 500;
+  line-height: 1.4;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.page {
+  min-width: 794px;
+  max-width: 794px;
+  min-height: 1123px;
+  max-height: 1123px;
+  background: #ffffff;
+  padding: 30px 50px;
+}
+.header {
+  margin-bottom: 10px;
+}
+.sub-header {
+  font-size: var(--normal-text);
+  margin-top: 4px;
+}
+.sub-header-links {
+  display: flex;
+  gap: 5px;
+  font-size: 16px;
+  color: #626262;
+}
+.header-justify {
+  display: flex;
+  justify-content: space-between;
+}
+.place-date-box {
+  text-align: right;
+  font-size: var(--small-text) !important;
+  color: #484848;
+}
