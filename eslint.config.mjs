@@ -1,37 +1,24 @@
-import js from '@eslint/js'
-import next from 'eslint-config-next'
+import { defineConfig, globalIgnores } from 'eslint/config'
+import nextVitals from 'eslint-config-next/core-web-vitals'
+import nextTs from 'eslint-config-next/typescript'
 import prettierConfig from 'eslint-config-prettier'
 import importPlugin from 'eslint-plugin-import'
 import prettierPlugin from 'eslint-plugin-prettier'
 
-const config = [
-  {
-    ignores: ['dist/*', 'node_modules/*'],
-  },
-  js.configs.recommended,
-  ...next,
+export default defineConfig([
+  ...nextVitals,
+  ...nextTs,
   prettierConfig,
   {
     plugins: {
       prettier: prettierPlugin,
       import: importPlugin,
     },
-
-    languageOptions: {
-      globals: {
-        jest: true,
-      },
-    },
-
     rules: {
-      // --- Prettier formatting ---
+      // ✅ Prettier
       'prettier/prettier': ['error', { singleQuote: true, semi: false }],
 
-      // --- Import sorting ---
-      'sort-imports': [
-        'error',
-        { ignoreCase: true, ignoreDeclarationSort: true },
-      ],
+      // ✅ Import order (keep this, very useful)
       'import/order': [
         'error',
         {
@@ -43,60 +30,29 @@ const config = [
           ],
           pathGroups: [
             {
-              pattern: '@(react|next)',
-              group: 'external',
-              position: 'before',
-            },
-            {
-              pattern: '@src/**',
-              group: 'internal',
+              pattern: '**/*.css',
+              group: 'index',
+              position: 'after',
             },
           ],
-          pathGroupsExcludedImportTypes: ['internal', 'react'],
+          pathGroupsExcludedImportTypes: ['css'],
           'newlines-between': 'always',
-          alphabetize: {
-            order: 'asc',
-            caseInsensitive: true,
-          },
+          alphabetize: { order: 'asc', caseInsensitive: true },
         },
       ],
 
-      // --- Best practices & readability ---
-      curly: 'error',
+      // ✅ Keep only high-value rules
       eqeqeq: ['error', 'always'],
-      'consistent-return': 'error',
-      'no-else-return': 'warn',
-      'no-multi-spaces': 'error',
-      'no-unneeded-ternary': 'error',
-      'array-callback-return': 'error',
-
-      // --- Variables ---
+      curly: 'error',
       'prefer-const': 'error',
-      'no-var': 'error',
-      'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-      'no-shadow': 'error',
 
-      // --- Functions & async ---
-      'require-await': 'error',
-      'no-return-await': 'error',
-      'default-param-last': 'error',
+      // ⚠️ TS handles unused vars better
+      'no-unused-vars': 'off',
 
-      // --- Strings ---
-      'prefer-template': 'error',
-      quotes: ['error', 'single', { avoidEscape: true }],
-      'no-useless-concat': 'error',
-
-      // --- Numbers & operators ---
-      'no-plusplus': 'warn',
-      'no-implicit-coercion': 'warn',
-
-      // --- Debugging & safety ---
-      'no-debugger': 'error',
+      // Good practice
       'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
-      'no-alert': 'warn',
-      'no-throw-literal': 'error',
     },
   },
-]
 
-export default config
+  globalIgnores(['.next/**', 'out/**', 'build/**', 'next-env.d.ts']),
+])

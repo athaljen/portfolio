@@ -1,0 +1,16 @@
+.custom-tab-list {
+  background: #2e2e2e;
+  box-shadow:
+    inset 18px 18px 38px #121212,
+    inset -18px -18px 38px #4a4a4a;
+}
+.custom-tab-active {
+  background: #28282855;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow:
+    2px 2px 4px #1c1c1c,
+    -2px -2px 4px #3a3a3a;
+}
