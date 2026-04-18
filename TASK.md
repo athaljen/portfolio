@@ -1,6 +1,0 @@
-- Add all the projects
-- Add missing modals
-- Update links and content
-- Update to app router
-- Add a fun interaction
-- Add personal Projects

@@ -78,7 +78,7 @@ const ProjectDetailsModal = forwardRef<ModalRefType, Props>((_, ref) => {
         },
       }}
     >
-      <div>
+      <div className="pb-5">
         <div
           style={{ position: 'sticky' }}
           className="flex justify-between items-center py-3 px-5 mb-5 border-b border-[#ffffff20]

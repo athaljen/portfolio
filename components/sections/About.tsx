@@ -63,13 +63,12 @@ function About() {
                   >
                     {/* Icon */}
                     <div className="w-11 h-11 rounded-full bg-gray-100/90 flex items-center justify-center hover:rotate-5">
-                      <Image
-                        src={s.icon}
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={s.icon.src || s.icon}
                         alt={s.title}
-                        width={30}
-                        height={30}
                         title={s.title}
-                        className="object-contain max-w-[30px] max-h-[30px]"
+                        className="object-contain max-h-[24px] max-w-[24px] h-[24px] w-[24px]"
                       />
                     </div>
 
