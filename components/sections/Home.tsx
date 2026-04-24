@@ -14,11 +14,9 @@ import RevealX from '../ui/RevealX'
 
 export default function Home() {
   return (
-    <section id="home" className="min-h-screen h-screen">
-      <div className="position-absolute inset-0 overflow-hidden">
-        <div className="home-bg-mask">
-          <div className="home-bg-dots"></div>
-        </div>
+    <section id="home" className="min-h-screen h-screen pt-20 px-5">
+      <div className="home-bg-mask">
+        <div className="home-bg-dots"></div>
       </div>
 
       <RevealX className="flex flex-col md:flex-row h-full">

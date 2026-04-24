@@ -4,7 +4,7 @@ import ExpCard from '../main/ExpCard'
 
 export default function Experience() {
   return (
-    <section id="experience" className="min-h-screen">
+    <section id="experience" className="min-h-screen pt-10 px-5">
       <h2 className="text-primary text-2xl font-bold mb-8 text-center">
         Work Experience
       </h2>

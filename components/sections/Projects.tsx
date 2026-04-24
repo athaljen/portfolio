@@ -48,7 +48,7 @@ function Projects() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: 'easeOut', delay: 0.3 }}
       viewport={{ once: true }}
-      className="min-h-screen"
+      className="min-h-screen pt-10 px-5"
     >
       <h2 className="text-primary text-2xl font-bold mb-8 text-center">
         Projects
@@ -61,10 +61,11 @@ function Projects() {
               key={tab.name}
               active={activeTab === tab.name}
               onClick={() => setActiveTab(tab.name)}
-              className="px-4"
             >
               <tab.Icon className="w-5 h-5" fill="currentColor" />
-              <span className="ml-2 mt-0.5">{tab.name}</span>
+              <p className="ml-2 mt-0.5 hidden [@media(min-width:420px)]:block">
+                {tab.name}
+              </p>
             </TabItem>
           ))}
         </TabList>

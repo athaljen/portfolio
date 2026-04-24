@@ -51,7 +51,7 @@ function ContactMe() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
       viewport={{ once: true }}
-      className="mt-20 !min-h-[60dvh]"
+      className="mt-20 !min-h-[60dvh] pt-10 px-5"
     >
       <h2 className="text-primary text-2xl font-bold mb-8 text-center">
         Contact Me

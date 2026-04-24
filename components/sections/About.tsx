@@ -22,7 +22,7 @@ function About() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: 'easeOut', delay: 0.3 }}
       viewport={{ once: true }}
-      className="min-h-screen bg-[radial-gradient(circle,_#0940747a,_#09407443_30%,_transparent_60%,_transparent_100%)]"
+      className="min-h-screen pt-10 px-5 bg-[radial-gradient(circle,_#0940747a,_#09407443_30%,_transparent_60%,_transparent_100%)]"
     >
       <h2 className="text-primary text-2xl font-bold mb-8 text-center">
         About Me
@@ -37,7 +37,7 @@ function About() {
           backend using React Native, Next.js, and Node.js.
         </p>
 
-        <h3 className="text-md mt-10 mb-4 font-semibold">
+        <h3 className="text-lg mt-10 mb-4 font-semibold">
           My <span className="text-primary">Skills</span>
         </h3>
 
