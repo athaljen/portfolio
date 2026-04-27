@@ -33,6 +33,7 @@ body {
   font-family: var(--font-family), sans-serif;
   margin: 0px;
   padding: 0px;
+  overflow-x: hidden;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -52,7 +53,7 @@ input[type='number']::-webkit-outer-spin-button {
 .safe-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0px 16px;
+  padding: 0px;
 }
 .text-primary {
   color: var(--primary);

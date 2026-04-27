@@ -22,7 +22,7 @@ function About() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: 'easeOut', delay: 0.3 }}
       viewport={{ once: true }}
-      className="min-h-screen bg-[radial-gradient(circle,_#0940747a,_#09407443_30%,_transparent_60%,_transparent_100%)]"
+      className="min-h-screen pt-10 px-5 bg-[radial-gradient(circle,_#0940747a,_#09407443_30%,_transparent_60%,_transparent_100%)]"
     >
       <h2 className="text-primary text-2xl font-bold mb-8 text-center">
         About Me
@@ -37,7 +37,7 @@ function About() {
           backend using React Native, Next.js, and Node.js.
         </p>
 
-        <h3 className="text-md mt-10 mb-4 font-semibold">
+        <h3 className="text-lg mt-10 mb-4 font-semibold">
           My <span className="text-primary">Skills</span>
         </h3>
 
@@ -63,13 +63,12 @@ function About() {
                   >
                     {/* Icon */}
                     <div className="w-11 h-11 rounded-full bg-gray-100/90 flex items-center justify-center hover:rotate-5">
-                      <Image
-                        src={s.icon}
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={s.icon.src || s.icon}
                         alt={s.title}
-                        width={30}
-                        height={30}
                         title={s.title}
-                        className="object-contain max-w-[30px] max-h-[30px]"
+                        className="object-contain max-h-[24px] max-w-[24px] h-[24px] w-[24px]"
                       />
                     </div>
 

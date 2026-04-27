@@ -9,27 +9,27 @@ const navLinks = [
   {
     name: 'Home',
     href: '/#home',
-    dropdownClass: 'nav-links nav-dropdown-a nd-a5',
+    dropdownClass: 'nav-links backdrop-blur-md nav-dropdown-a nd-a5',
   },
   {
     name: 'About',
     href: '/#about',
-    dropdownClass: 'nav-links nav-dropdown-a nd-a3',
+    dropdownClass: 'nav-links backdrop-blur-md nav-dropdown-a nd-a3',
   },
   {
     name: 'Work',
     href: '/#experience',
-    dropdownClass: 'nav-links nav-dropdown-a nd-a1',
+    dropdownClass: 'nav-links backdrop-blur-md nav-dropdown-a nd-a1',
   },
   {
     name: 'Projects',
     href: '/#projects',
-    dropdownClass: 'nav-links nav-dropdown-a nd-a2',
+    dropdownClass: 'nav-links backdrop-blur-md nav-dropdown-a nd-a2',
   },
   {
     name: 'Contact',
     href: '/#contact',
-    dropdownClass: 'nav-links nav-dropdown-a nd-a4',
+    dropdownClass: 'nav-links backdrop-blur-md nav-dropdown-a nd-a4',
   },
 ]
 

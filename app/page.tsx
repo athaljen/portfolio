@@ -7,12 +7,12 @@ import './index.css'
 
 export default function App() {
   return (
-    <>
+    <div>
       <Home />
       <About />
       <Experience />
       <Projects />
       <ContactMe />
-    </>
+    </div>
   )
 }

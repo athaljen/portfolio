@@ -1,6 +1,7 @@
 import { ProjectDataType } from '@/types/ProjectTypes'
 
 import apkaBazar from '../assets/projects/apka-bazar.png'
+import cubeGame from '../assets/projects/cube-game.png'
 import ffBargainsApp from '../assets/projects/ff-bargains-app.png'
 import ffBargainsWeb from '../assets/projects/ff-bargains-web.png'
 import gmKlangWeb from '../assets/projects/gm-klang-web.png'
@@ -493,6 +494,25 @@ const projectsData: ProjectDataType[] = [
     android: '',
     ios: '',
     website: 'https://www.npmjs.com/package/react-native-pip-mode',
+  },
+  {
+    title: 'Cube Game',
+    description:
+      'A 3D cube game built using Html, Css and Javascript, providing an immersive gaming experience with interactive controls and visually appealing graphics.',
+    type: 'Website',
+    tags: ['Personal'],
+    date: 'Oct 2024',
+    contributions: [
+      'Developed a 3D cube game using HTML, CSS, and JavaScript, providing an immersive gaming experience with interactive controls and visually appealing graphics.',
+      'Implemented game mechanics such as cube rotation, collision detection, and scoring system to enhance gameplay and user engagement.',
+      'Optimized the game for performance and responsiveness across different devices and screen sizes.',
+      'Published the game on a personal website, allowing users to play and share the game with others.',
+    ],
+    techStack: ['HTML', 'CSS', 'JavaScript'],
+    image: cubeGame,
+    android: '',
+    ios: '',
+    website: 'https://athaljen.github.io/cube-game/',
   },
 ]
 
