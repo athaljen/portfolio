@@ -50,33 +50,8 @@ const ProjectDetailsModal = forwardRef<ModalRefType, Props>((_, ref) => {
       onRequestClose={handleClose}
       preventScroll={true}
       ariaHideApp={false}
-      style={{
-        content: {
-          backgroundColor: '#151515',
-          border: 'none',
-          borderRadius: '18px',
-          maxWidth: '786px',
-          padding: '0px 16px',
-          placeSelf: 'center',
-          right: '20px',
-          left: '20px',
-          overflowY: 'auto',
-          maxHeight: '90vh',
-          flexGrow: 1,
-          color: '#ffffff',
-          scrollbarWidth: 'none',
-          borderWidth: '1px',
-          borderColor: '#ffffff20',
-          borderStyle: 'solid',
-        },
-        overlay: {
-          backgroundColor: 'rgba(0, 0, 0, 0.6)',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          zIndex: 10000,
-        },
-      }}
+      style={modalStyles}
+      closeTimeoutMS={500}
     >
       <div className="pb-5">
         <div
@@ -100,18 +75,24 @@ const ProjectDetailsModal = forwardRef<ModalRefType, Props>((_, ref) => {
         </p>
 
         <strong>Contributions:</strong>
-        <ul className="ms-4 mb-4 text-sm list-disc">
+        <ul className="ms-4 mb-4 text-sm list-disc gap-1">
           {data?.contributions.map((contribution, index) => (
             <li key={index}>{contribution}</li>
           ))}
         </ul>
 
         <strong>Tech Stack:</strong>
-        <ul className="project-tech-stack">
+
+        <div className="flex items-center flex-wrap gap-2 mt-2">
           {data?.techStack.map((tech, index) => (
-            <p key={index}>{tech}</p>
+            <p
+              key={index}
+              className="bg-[#ffffff1a] text-[#ffffffb3] px-3 py-1 rounded-full text-xs"
+            >
+              {tech}
+            </p>
           ))}
-        </ul>
+        </div>
 
         <div className="flex gap-4 mt-4">
           {data?.android && (
@@ -149,6 +130,35 @@ const ProjectDetailsModal = forwardRef<ModalRefType, Props>((_, ref) => {
     </Modal>
   )
 })
+
+const modalStyles: Modal['props']['style'] = {
+  content: {
+    backgroundColor: '#151515',
+    border: 'none',
+    borderRadius: '18px',
+    maxWidth: '786px',
+    padding: '0px 16px',
+    placeSelf: 'center',
+    right: '20px',
+    left: '20px',
+    overflowY: 'auto',
+    maxHeight: '90vh',
+    flexGrow: 1,
+    color: '#ffffff',
+    scrollbarWidth: 'none',
+    borderWidth: '1px',
+    borderColor: '#ffffff20',
+    borderStyle: 'solid',
+    transition: 'all 0.3s ease',
+  },
+  overlay: {
+    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 10000,
+  },
+}
 
 ProjectDetailsModal.displayName = 'ProjectDetailsModal'
 export default memo(ProjectDetailsModal)
