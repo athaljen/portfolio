@@ -11,6 +11,7 @@ import {
   XTwitterSvg,
 } from '@/assets/text-svg-icons'
 import { PERSONAL_LINKS } from '@/constants'
+import { Toast } from '@/utils/Toast'
 
 type FormInputs = {
   name: string
@@ -24,34 +25,39 @@ function ContactMe() {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<FormInputs>()
 
-  const onSubmit = useCallback(async (data: FormInputs) => {
-    try {
-      setSending(true)
-      const response = await fetch('/api/send-mail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      }).then((res) => res.json())
+  const onSubmit = useCallback(
+    async (data: FormInputs) => {
+      try {
+        setSending(true)
+        const response = await fetch('/api/send-mail', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        }).then((res) => res.json())
 
-      if (response.success) {
-        alert(response.message || 'Message sent successfully!')
-      } else {
-        throw new Error(
-          response.message || response.error || 'Failed to send message',
-        )
+        if (response.success) {
+          Toast.success('Message sent successfully!')
+          reset()
+        } else {
+          throw new Error(
+            response.message || response.error || 'Failed to send message',
+          )
+        }
+      } catch (error) {
+        const errorMessage =
+          typeof error === 'string' ? error : 'Something went wrong.'
+        Toast.error(errorMessage)
+      } finally {
+        setSending(false)
       }
-    } catch (error) {
-      const errorMessage =
-        typeof error === 'string' ? error : 'Something went wrong.'
-      alert(errorMessage)
-    } finally {
-      setSending(false)
-    }
-  }, [])
+    },
+    [reset],
+  )
 
   return (
     <motion.section

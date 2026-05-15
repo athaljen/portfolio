@@ -9,7 +9,7 @@
   );
   position: fixed;
   top: 0;
-  z-index: 10000;
+  z-index: 100;
   padding-top: max(15px, env(safe-area-inset-top));
 }
 .header-container {

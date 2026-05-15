@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Toaster } from 'react-hot-toast'
 
 import PortfolioFooter from '@/components/layout/PortfolioFooter'
 import PortfolioHeader from '@/components/layout/PortfolioHeader'
@@ -31,6 +32,7 @@ export default function RootLayout({
         <PortfolioHeader />
         <main className="safe-container">{children}</main>
         <PortfolioFooter />
+        <Toaster />
       </body>
     </html>
   )

@@ -92,3 +92,11 @@ input[type='number']::-webkit-outer-spin-button {
 .primary-btn:hover::before {
   width: 100%;
 }
+.custom-toast {
+  background-color: var(--card-bg) !important;
+  color: var(--foreground) !important;
+  border: 1px solid var(--card-border) !important;
+  border-radius: 50px !important;
+  padding: 10px !important;
+  font-size: 0.9rem !important;
+}
