@@ -15,7 +15,6 @@ import { PERSONAL_LINKS } from '@/constants'
 type FormInputs = {
   name: string
   email: string
-  phone: number
   message: string
 }
 
@@ -37,8 +36,18 @@ function ContactMe() {
         },
         body: JSON.stringify(data),
       }).then((res) => res.json())
-    } catch {
-      // alert('Failed to send message. Please try again later.')
+
+      if (response.success) {
+        alert(response.message || 'Message sent successfully!')
+      } else {
+        throw new Error(
+          response.message || response.error || 'Failed to send message',
+        )
+      }
+    } catch (error) {
+      const errorMessage =
+        typeof error === 'string' ? error : 'Something went wrong.'
+      alert(errorMessage)
     } finally {
       setSending(false)
     }
