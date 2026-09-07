@@ -1,6 +1,7 @@
-import { type MetadataRoute } from 'next'
+import { MetadataRoute } from 'next'
 
 import portfolioData from '@/data/portfolioData'
+
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: portfolioData.name,
