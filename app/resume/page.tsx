@@ -5,41 +5,24 @@ export default function Resume() {
   return (
     <div className="resume-page">
       <div className="container">
-        {/* <!-- MARK:- PAGE-1 --> */}
-
         <div className="page">
-          {/* <!-- MARK:- Header --> */}
+          {/* Header  */}
           <div className="header">
-            <h1 className="resume-name">BISWORANJAN JENA</h1>
+            <h1>BISWORANJAN JENA</h1>
             <div className="sub-header">
-              Software Engineer (React Native | Full Stack)
-              <br />
-              Bhubaneswar, Odisha
-              <br />
+              Software Engineer — React Native & Full Stack | Salem, Tamil Nadu
             </div>
             <div className="sub-header-links">
-              <a className="resume-links" href="tel:+916370584925">
-                +91 63705 84925
-              </a>
-              |
-              <a
-                className="resume-links"
-                href="mailto:bisworanjanjena23@gmail.com"
-              >
+              <a href="tel:+916370584925">+91 63705 84925</a>|
+              <a href="mailto:bisworanjanjena23@gmail.com">
                 bisworanjanjena23@gmail.com
               </a>
               |
-              <a
-                className="resume-links"
-                href="https://athaljen.tech/"
-                target="_blank"
-              >
-                {' '}
-                Portfolio{' '}
+              <a href="https://athaljen.tech/" target="_blank">
+                Portfolio
               </a>
               |
               <a
-                className="resume-links"
                 href="https://www.linkedin.com/in/bisworanjanjena23"
                 target="_blank"
               >
@@ -48,255 +31,169 @@ export default function Resume() {
             </div>
           </div>
 
-          {/* <!-- MARK:- Summary --> */}
-          <h2 className="resume-header-title">SUMMARY</h2>
-          <p className="resume-texts">
-            Software Development Engineer with 3+ years of experience building
-            scalable mobile, web, and backend applications using React Native,
-            Next.js, Node.js, Supabase, and Firebase. Demonstrated ability to
-            improve performance, strengthen security, and enhance user
-            experience.
+          {/* Summary  */}
+          <h2 className="mt-0">SUMMARY</h2>
+          <p>
+            Software Development Engineer with 3.5+ years of experience building
+            production-grade mobile, web, and backend applications using React
+            Native, TypeScript, Next.js, and Node.js. Shipped over 15 apps
+            across consumer, e-commerce, and enterprise domains, with expertise
+            in performance optimization, API integration, CI/CD, and AI-powered
+            applications.
           </p>
 
-          {/* <!-- MARK:- Achievements --> */}
-          <h2 className="resume-header-title">ACHIEVEMENTS</h2>
-          <ul className="resume-ul">
-            <li>
-              Built and delivered 15+ mobile and web applications across iOS,
-              Android, and web.
-            </li>
-            <li>
-              Achieved 100K+ downloads and 4.1+ average ratings across multiple
-              apps.
-            </li>
-            <li>
-              Developed real-time and AI-powered features improving engagement
-              by and retention.
-            </li>
-            <li>
-              Experience in CI/CD pipelines, scalable architecture, and
-              mentoring developers.
-            </li>
-          </ul>
-
-          {/* <!-- MARK:- Work Experience --> */}
-          <h2 className="resume-header-title">WORK EXPERIENCE</h2>
+          {/* Work Experience  */}
+          <h2>WORK EXPERIENCE</h2>
           <div className="header-justify">
-            <p className="resume-texts">
+            <p>
               <strong>Software Development Engineer I</strong>
               <br />
               Xam Guide Private Limited
             </p>
-            <p className="resume-texts place-date-box">
-              (March 2025 - Present)
+            <p className="place-date-box">
+              March 2025 - Present
               <br />
-              Coimbatore, Tamil Nadu (Remote)
+              Salem, TN (Remote)
             </p>
           </div>
-          <ul className="resume-ul">
+          <ul>
             <li>
-              Developed and maintained scalable features using Expo, React
-              Native, Supabase, Node.js and backend services improved
-              application performance and user experience.
+              Built and maintained production features using Expo, React Native,
+              Next.js, Supabase, and Node.js, focusing on application
+              performance, reliability, and user experience.
             </li>
             <li>
-              Established CI/CD pipelines using Bitbucket, Docker, and automated
-              testing with Jest and Detox, reducing deployment time and improved
-              code quality.
+              Set up CI/CD with Bitbucket, Docker, Jest, and Detox, cutting
+              deployment time and raising code quality.
             </li>
             <li>
               Optimized API calls and state management, reducing load times by
-              25% and improving app responsiveness
+              25%.
             </li>
             <li>
-              Collaborated with cross-functional teams (design, QA) to deliver
-              features on time in an agile environment.
-            </li>
-            <li>
-              Mentored junior developers by conducting code reviews and sharing
-              best practices.
+              Mentored junior developers through code reviews and best-practice
+              guidance.
             </li>
           </ul>
 
-          <div className="header-justify mt-2">
-            <p className="resume-texts">
-              <strong>React Native Developer </strong>
+          <div className="header-justify" style={{ marginTop: '10px' }}>
+            <p>
+              <strong>React Native Developer</strong>
               <br />
               SilverSky Technology
             </p>
-            <p className="resume-texts place-date-box">
-              (February 2023 - January 2025)
+            <p className="place-date-box">
+              February 2023 - January 2025
               <br />
               Ahmedabad, Gujarat
             </p>
           </div>
-          <ul className="resume-ul">
+          <ul>
             <li>
-              Successfully developed and deployed over 12 mobile and web
-              applications across Play Store and App Store.
+              Developed, enhanced, and maintained 12+ mobile and web apps across
+              the Play Store and App Store, delivering new features, bug fixes,
+              and performance improvements.
             </li>
             <li>
-              Utilized RESTful APIs, Web-Sockets, and third-party libraries to
-              enhance functionality and user experience.
+              Used REST APIs, WebSockets, and third-party libraries to extend
+              functionality and UX.
             </li>
             <li>
-              Collaborated with product managers, cross-functional teams, and QA
-              to deliver high-quality projects on time.
-            </li>
-            <li>
-              Conducted regular code reviews, ensuring adherence to best
-              practices and boosting team productivity.
+              Conducted regular code reviews, improving code quality, adherence
+              to best practices, and team productivity.
             </li>
           </ul>
 
-          {/* <!-- MARK:- Skills--> */}
-          <h2 className="resume-header-title">TECHNICAL SKILLS</h2>
-          <p className="resume-texts">
-            <strong>Core: </strong>
-            React Native, Expo, React.js, Next.js, Node.js, JavaScript,
-            TypeScript, Kotlin
+          {/* Skills  */}
+          <h2>TECHNICAL SKILLS</h2>
+          <p>
+            <strong>Languages & Frameworks:</strong> JavaScript, TypeScript,
+            React Native, Expo, React.js, Next.js, Node.js, Kotlin
           </p>
-          <p className="resume-texts">
-            <strong>State & Data Management: </strong>
-            Redux, Redux-Toolkit, Zustand, Axios, React Query (TanStack Query)
+          <p>
+            <strong>State & Data Fetching:</strong> Redux Toolkit, Zustand,
+            TanStack Query, Axios
           </p>
-          <p className="resume-texts">
-            <strong>Backend & APIs: </strong>
-            REST APIs, GraphQL, WebSocket
+          <p>
+            <strong>Backend & Databases:</strong> Supabase, Firebase,
+            PostgreSQL, SQLite, REST APIs, GraphQL, WebSockets
           </p>
-          <p className="resume-texts">
-            <strong>Database: </strong>
-            Firebase, SQLite, PostgreSQL, Supabase
+          <p>
+            <strong>DevOps & Testing:</strong> Docker, CI/CD, Git, Jest, React
+            Native Testing Library, Detox, EAS
           </p>
-          <p className="resume-texts">
-            <strong>DevOps & Deployment: </strong>
-            Docker, CI/CD Pipelines, Git, Bitbucket, GitLab, App Store & Play
-            STore Deployment
+          <p>
+            <strong>Integrations & Services:</strong> Stripe, Razorpay, FCM
+            (Push Notifications), Google Vision API, OAuth
           </p>
-          <p className="resume-texts">
-            <strong>Tools & Platforms: </strong>
-            VS COde, Xcode, Android Studio, Jira, Postman, Figma
+          <p>
+            <strong>Tools & Platforms:</strong> Xcode, Android Studio, VS Code,
+            Postman, Jira, Figma
           </p>
-          <p className="resume-texts">
-            <strong>Testing: </strong>
-            Jest, React Native Testing Library, Detox
-          </p>
-          <p className="resume-texts">
-            <strong>Services & Integrations: </strong>
-            Stripe, Razorpay, Firebase Auth, Cloud Messaging, Push
-            Notifications, Google Vision API
-          </p>
-        </div>
 
-        {/* <!-- MARK:- PAGE-2 --> */}
-        <div className="page">
-          {/* <!-- MARK:- Projects --> */}
-          <h2 className="resume-header-title mt-0">PROJECTS</h2>
-          <p className="resume-texts">
-            <strong>Learning and Exam preparation app (Iyal)</strong>
+          {/* Projects  */}
+          <h2>PROJECTS</h2>
+          <p>
+            <strong>Iyal</strong> — Engineered a cross-platform exam prep
+            platform with auth, real-time sync, AI-generated study content, TTS,
+            and mock tests, using React Native/Expo, Next.js, Supabase, and
+            Firebase. Integrated multi-model AI chat (GPT, Claude, Gemini,
+            DeepSeek) with MCP tools and custom agents, plus chat history and
+            token tracking. Deployed via CI/CD using Docker, Jest, Husky, and
+            ESLint.
+            <a href="https://iyal.app" target="_blank" className="link-a">
+              Live Demo
+            </a>
           </p>
-          <ul className="resume-ul">
-            <li>
-              Engineered a learning and exam preparation app using Expo, React
-              Native, Zustand, supabase, and Firebase, providing users with a
-              comprehensive platform for educational content and practice exams.
-            </li>
-            <li>
-              Designed and implemented core features including authentication,
-              study material upload, and real-time data synchronization.
-            </li>
-            <li>
-              Developed advanced functionalities such as AI-powered study
-              material generation, text-to-speech (TTS), mock tests, and
-              flashcards.
-            </li>
-            <li>
-              Established CI/CD pipelines and implemented tools such as Docker,
-              Jest, Husky, and ESLint to improve code quality and streamline
-              deployment.
-            </li>
-            <li>
-              Integrated analytics to track user engagement and performance,
-              allowing for data-driven improvements and personalized learning
-              paths.
-            </li>
-          </ul>
-
-          <p className="resume-texts">
-            <strong>Children&apos;s Storytelling App (Kahani Kids)</strong>
+          <p>
+            <strong>Kahani Kids</strong> — AI-powered storytelling app for kids
+            (3+), 160K+ downloads on Play Store. Built end-to-end with React
+            Native and Firebase; added premium subscriptions with in-app
+            purchases.
+            <a
+              href="https://play.google.com/store/apps/details?id=com.story_generation"
+              target="_blank"
+              className="link-a"
+            >
+              Live Demo
+            </a>
           </p>
-          <ul className="resume-ul">
-            <li>
-              Reached 160K+ downloads by developing an AI-powered storytelling
-              app for children (ages 3+) on the Google Play Store.
-            </li>
-            <li>
-              Led end-to-end development using React Native, Firebase, and
-              backend APIs, ensuring scalability and smooth UX.
-            </li>
-            <li>
-              Built premium subscription features with in-app purchases and
-              ad-free experience.
-            </li>
-          </ul>
-
-          <p className="resume-texts">
-            <strong>Tamil Nadu Government App (TN NHIS)</strong>
+          <p>
+            <strong>TN NHIS (Govt of Tamil Nadu)</strong> — Claims and insurance
+            tracking application for employees and pensioners, 100K+ downloads.
+            Built from scratch with React Native, Redux, Firebase, and backend
+            APIs.
+            <a
+              href="https://play.google.com/store/apps/details?id=com.tnhealthschemev2"
+              target="_blank"
+              className="link-a"
+            >
+              Live Demo
+            </a>
           </p>
-          <ul className="resume-ul">
-            <li>
-              Built a Tamil Nadu Government mobile app for employees and
-              pensioners to track and apply for claims with 100K+ downloads.
-            </li>
-            <li>
-              Built from scratch using React Native, Redux, firebase and Backend
-              APIs for claims, insurance and hospital listings.
-            </li>
-          </ul>
-
-          <p className="resume-texts">
-            <strong>E-Commerce Mobile & Web App (F&F-Bargains)</strong>
+          <p>
+            <strong>F&amp;F-Bargains</strong> — E-commerce web/mobile app with
+            live auctions, bidding, and chat; Firebase auth, Typesense search,
+            Stripe payments. Grew to 10,000 users in two months.
+            <a
+              href="https://play.google.com/store/apps/details?id=com.ffbargains"
+              target="_blank"
+              className="link-a"
+            >
+              Live Demo
+            </a>
           </p>
-          <ul className="resume-ul">
-            <li>
-              Led development and maintenance of web and mobile application,
-              incorporating Firebase authentication, Type-Sense for fast search,
-              Stripe payments Gateway, and Easy Post for delivery tracking.
-            </li>
-            <li>
-              Built real-time features such as live auctions, bidding, comments,
-              customer support, and live chat to enhance user engagement and
-              interaction. Successfully attracted 10,000 new users within two
-              months.
-            </li>
-          </ul>
 
-          {/* <!-- MARK:- Personal Projects & Open Source --> */}
-          <h2 className="resume-header-title">
-            PERSONAL PROJECTS & OPEN SOURCE
-          </h2>
-          <ul className="resume-ul">
-            <li>
-              Published React Native libraries used for developer productivity
-              and app features (react-native-dynamic-shortcut,
-              react-native-pip-mode, toast-react-native etc.)
-            </li>
-            <li>
-              Built a Google Lens-like application using Google Vision API for
-              text detection and QR scanning.
-            </li>
-          </ul>
-
-          {/* <!-- MARK:- Education --> */}
-          <h2 className="resume-header-title">EDUCATION</h2>
+          {/* Education  */}
+          <h2>EDUCATION</h2>
           <div className="header-justify">
-            <p className="resume-texts">
-              <strong>Master of Computer Application</strong>
+            <p>
+              <strong>Master of Computer Applications</strong>
               <br />
               Biju Patnaik University of Technology
             </p>
-            <p className="resume-texts place-date-box">
-              (2021–2023)
+            <p className="place-date-box">
+              2021–2023
               <br />
               Bhubaneswar, Odisha
             </p>
