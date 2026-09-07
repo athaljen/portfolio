@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next'
 
 import portfolioData from '@/data/portfolioData'
 
+export const dynamic = 'force-static'
+
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: portfolioData.name,
